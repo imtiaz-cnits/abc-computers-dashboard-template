@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown with Bank & Bkash</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.dropdown .input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.dropdown .options {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 100;
+}
+
+.dropdown.active .options {
+  display: block;
+}
+
+.options option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.options option:hover {
+  background: #f0f0f0;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#bank-container,
+#bkash-container {
+  display: none;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dropdown with Plain Input</h1>
+    </header>
+
+    <div class="dropdown">
+      <input  class="input" placeholder="Select an option" readonly>
+
+      <div class="options">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="bank">Bank</button>
+      <button id="bkash">Bkash</button>
+      <button id="submit">Submit</button>
+    </div>
+
+    <div id="bank-container" class="hidden">
+      <h2>Bank Container</h2>
+      <p>Content for bank-related operations.</p>
+    </div>
+
+    <div id="bkash-container" class="hidden">
+      <h2>Bkash Container</h2>
+      <p>Content for Bkash-related operations.</p>
+    </div>
+  </div>
+
+ <script>
+  // Toggle dropdown visibility on input click
+document.querySelectorAll(".dropdown .input").forEach((input) => {
+  input.addEventListener("click", function (event) {
+    event.stopPropagation();
+    const dropdown = input.closest(".dropdown");
+    const isActive = dropdown.classList.contains("active");
+
+    // Close all dropdowns except the current one
+    document.querySelectorAll(".dropdown").forEach((d) => d.classList.remove("active"));
+
+    if (!isActive) {
+      dropdown.classList.add("active");
+    }
+  });
+});
+
+// Close dropdowns when clicking outside
+window.addEventListener("click", function () {
+  document.querySelectorAll(".dropdown").forEach((dropdown) => dropdown.classList.remove("active"));
+});
+
+// Filter options within dropdowns
+document.querySelectorAll(".dropdown .input").forEach((input) => {
+  input.addEventListener("input", function () {
+    const dropdown = input.closest(".dropdown");
+    const options = dropdown.querySelectorAll(".options option");
+    const searchQuery = input.value.toLowerCase();
+
+    options.forEach((option) => {
+      const optionText = option.textContent.toLowerCase();
+      option.style.display = optionText.includes(searchQuery) ? "block" : "none";
+    });
+  });
+});
+
+// Select option and update input value
+document.querySelectorAll(".dropdown .options option").forEach((option) => {
+  option.addEventListener("click", function () {
+    const dropdown = option.closest(".dropdown");
+    const input = dropdown.querySelector(".input");
+    input.value = option.textContent;
+    dropdown.classList.remove("active");
+  });
+});
+
+// Prevent dropdown closing on container click
+document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  dropdown.addEventListener("click", (event) => event.stopPropagation());
+});
+
+// Toggle Bank and Bkash containers
+document.getElementById("bank").addEventListener("click", function () {
+  document.getElementById("bank-container").style.display = "flex";
+  document.getElementById("bkash-container").style.display = "none";
+});
+
+document.getElementById("bkash").addEventListener("click", function () {
+  const bkashContainer = document.getElementById("bkash-container");
+  const isVisible = bkashContainer.style.display === "flex";
+  bkashContainer.style.display = isVisible ? "none" : "flex";
+  document.getElementById("bank-container").style.display = "none";
+});
+
+// Close dropdowns on submit
+document.getElementById("submit").addEventListener("click", function () {
+  document.querySelectorAll(".dropdown").forEach((dropdown) => dropdown.classList.remove("active"));
+  document.getElementById("bank-container").style.display = "none";
+  document.getElementById("bkash-container").style.display = "none";
+});
+
+
+ </script>
+</body>
+</html>

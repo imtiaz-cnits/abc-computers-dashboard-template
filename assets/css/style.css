@@ -1,0 +1,1767 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ====================
+  Reset Default CSS Start
+  ==================== */
+
+:root {
+  --primary-font: "Space Grotesk", serif;
+  --secondary-font: "Albert Sans", serif;
+  --white: #ffffff;
+  --text-color: #171717;
+  --text-color2: #888888;
+  --primary-color: #5aa469;
+  --stroke: #c6c6c6;
+  --hover-color: #d8efd3;
+  --hover-color2: #f4fff2;
+  --gray: #eeeeee;
+  --box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 17%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+  margin-top: 0;
+}
+
+p {
+  font-family: var(--secondary-font);
+}
+
+span {
+  font-family: var(--primary-font);
+}
+
+a {
+  text-decoration: none !important;
+  font-family: var(--primary-font);
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  font-family: var(--primary-font);
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: var(--primary-font);
+}
+
+input {
+  outline: none;
+  font-family: var(--secondary-font) !important;
+}
+
+label {
+  font-family: var(--primary-font);
+}
+
+th {
+  font-family: var(--primary-font);
+}
+
+td {
+  font-family: var(--secondary-font);
+}
+
+/*====================
+Reset Default CSS End
+====================*/
+
+/* scrollbar */
+html ::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: var(--primary-color) !important;
+  width: 10px;
+  border-radius: 5px;
+  border-color: none !important;
+}
+
+/* scrollbar */
+/* .......................................................... */
+/* ......................Dashboard Css Start................. */
+/* .......................................................... */
+/* Cards Start */
+
+#cards {
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+#cards .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--hover-color);
+  border-radius: 6px;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+
+#cards .card-body:hover {
+  box-shadow: var(--box-shadow);
+}
+
+#cards .card-icon {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+#cards .card-icon img {
+  width: 100%;
+}
+
+#cards .card-icon svg {
+  width: 100% !important;
+}
+
+#cards h4 {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  margin: 10px 0 !important;
+  margin-bottom: 0px;
+}
+
+#cards h5 {
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  text-align: center;
+  margin: 0;
+}
+
+/* Cards End */
+
+.data-table .invoice-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.data-table .invoice-btn h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.data-table .table-btn-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.data-table .create-invoices {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  white-space: nowrap;
+  border-radius: 5px;
+  border: 1px solid var(--stroke) !important;
+  background: var(--primary-color);
+  font-family: var(--primary-font);
+  border: none;
+  padding: 6px 10px;
+  transition: 0.4s;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.data-table .create-invoices:hover {
+  background: var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--stroke);
+}
+
+.data-table .view-more-btn {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  font-size: 16px;
+  padding: 8px 10px;
+  white-space: nowrap;
+  border: 1px solid var(--stroke);
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: var(--white) !important;
+  font-family: var(--primary-font);
+  border: none;
+}
+
+/* .......................................................... */
+/* ......................Dashboard Css End................. */
+/* .......................................................... */
+
+/* .......................................................... */
+/* ......................Sign in Sign Up Css Start................. */
+/* .......................................................... */
+.sign-in-signup .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../img/Sign-In-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sign-in-signup .container .card {
+  width: 800px;
+  background: rgba(255, 255, 255, 0.4);
+  font-family: var(--primary-font);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  padding: 16px;
+}
+
+.sign-in-signup .card .card-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-signup .card .card-wrapper .card-image {
+  width: 50%;
+}
+
+.sign-in-signup .card .card-wrapper .card-item {
+  width: 50%;
+  padding: 30px 30px 30px 46px;
+}
+
+.sign-in-signup .card .card-wrapper img {
+  height: auto;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.sign-in-signup .card .brand-logo {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.sign-in-signup .card .brand-logo img {
+  width: 180px;
+  height: 60px;
+}
+
+.sign-in-signup .card h2 {
+  font-size: 23px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.sign-in-signup .card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-signup .card form label {
+  position: relative;
+  margin-bottom: 5px;
+  margin: 0px;
+}
+
+.sign-in-signup .card label .hide-icon {
+  width: 25px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+.sign-in-signup .card input {
+  position: relative;
+  width: 100%;
+  font-family: var(--secondary-font);
+  padding: 12px 10px;
+  margin-bottom: 12px;
+  color: var(--text-color);
+  border: 1px solid var(--gray);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.sign-in-signup .card input:focus {
+  border-color: var(--primary-color) !important;
+}
+
+.sign-in-signup .card input::placeholder {
+  color: var(--text-color) !important;
+}
+
+.sign-in-signup .card .forgot-password {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.sign-in-signup .card .sign-up-btn,
+.sign-in-signup .card .sign-in-btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: var(--text-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.sign-in-signup .card .sign-up-btn:hover,
+.sign-in-signup .card .sign-in-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.sign-in-signup .card .switch {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: var(--primary-font);
+}
+
+.sign-in-signup .switch a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-decoration: underline !important;
+}
+
+.sign-in-signup .password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-signup .password-container #togglePassword {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.sign-in-signup .password-container input {
+  width: 100%;
+  padding-right: 30px;
+  /* Optional, to keep input field look consistent */
+}
+
+.sign-in-signup .toggle-password {
+  position: relative;
+  top: -10px;
+  /* Adjust based on your design needs */
+  cursor: pointer;
+  z-index: 2;
+  /* Ensure the icon is clickable */
+  padding: 5px;
+}
+
+.sign-in-signup .card form .cheakbox {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.sign-in-signup .card form .cheakbox a {
+  color: var(--primary-color);
+}
+
+.sign-in-signup .card form .cheakbox input {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  margin: 0px;
+}
+
+.sign-in-signup .card form .cheakbox h1 {
+  text-align: left;
+  font-size: 16px;
+  padding-left: 10px;
+  margin: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .sign-in-signup .card .card-wrapper .card-image {
+    display: none;
+  }
+
+  .sign-in-signup .card .card-wrapper .card-item {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .sign-in-signup .card .brand-logo img {
+    width: 150px;
+    height: 50px;
+  }
+
+  .sign-in-signup .card h2 {
+    font-size: 20px;
+  }
+}
+
+/* .......................................................... */
+/* ......................Sign in Sign Up Css End................. */
+/* .......................................................... */
+
+/* .......................................................... */
+/* ......................Invoice Css Start................. */
+/* .......................................................... */
+.invoice-container {
+  max-width: 800px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.invoice-container .invoice-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.invoice-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.invoice-container .header .logo {
+  width: 170px;
+  height: 55px;
+  border: none;
+}
+
+.invoice-container .header .logo img {
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.invoice-container .invoice-wrapper {
+  text-align: center;
+}
+
+.invoice-container .invoice-wrapper table {
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.invoice-container .invoice-wrapper td {
+  border: 1px solid #000000;
+  padding: 10px 10px;
+  color: #000000;
+  font-size: 16px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.invoice-container .invoice-wrapper .number,
+.date {
+  background: #d6d6d6;
+  font-weight: 700;
+}
+
+.invoice-container .invoice-wrapper tr:first-child td:first-child {
+  border-top-left-radius: 8px;
+}
+
+.invoice-container .invoice-wrapper tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.invoice-container .invoice-wrapper tr:first-child td:last-child {
+  border-top-right-radius: 8px;
+}
+
+.invoice-container .invoice-wrapper tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.invoice-container .billing-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.invoice-container .billing-card {
+  width: 48%;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.invoice-container .billing-card h3 {
+  margin-bottom: 10px;
+}
+
+.invoice-container .billing-card p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.invoice-container .invoice_table_list {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+.invoice-container .invoice_table_list th,
+.invoice-container .invoice_table_list td {
+  padding: 10px;
+  border: 2px solid #333;
+  text-align: center;
+}
+
+.invoice-container .invoice_table_list th {
+  background-color: #e0e0e0;
+  font-weight: 600;
+}
+
+.invoice-container .full-paid {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.invoice-container .amount_text,
+.invoice-container .amount {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.invoice-container .table_bg {
+  background: #d6d6d6;
+}
+
+.invoice-container .footer-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.invoice-container .footer-message p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .invoice-container .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .invoice-container .billing-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .invoice-container .billing-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .invoice-container .invoice-title {
+    font-size: 1.5em;
+  }
+
+  .invoice-container .invoice_table_list {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .invoice-container .invoice_table_list th,
+  .invoice-container .invoice_table_list td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .invoice-container .footer-message {
+    font-size: 12px;
+  }
+}
+
+@media print {
+  .invoice-container .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .invoice-container .billing-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* .......................................................... */
+/* ......................Invoice Css End................. */
+/* .......................................................... */
+
+/* .......................................................... */
+/* ......................Invoice Details Css Start................. */
+/* .......................................................... */
+/* Finance Invoice Details Start */
+
+.invoice-details-wrap .bredcam {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin: 0px 0px 10px 0px;
+}
+
+.invoice-details-wrap .bredcam span {
+  font-size: 30px;
+  padding: 0 6px;
+  color: #aaaaaa;
+}
+
+.invoice-details-wrap .bredcam h1 {
+  font-weight: 600;
+  font-size: 32px;
+  margin: 0;
+  font-family: var(--primary-font);
+  color: var(--text-color2);
+}
+
+.invoice-details-wrap .bredcam a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+}
+
+.invoice-details-wrap #invoice-details {
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.invoice-details-wrap #invoice-details .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.invoice-details-wrap #invoice-details .brand-logo {
+  margin-bottom: 10px;
+}
+
+.invoice-details-wrap #invoice-details .brand-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.invoice-details-wrap #invoice-details .brand-logo span {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color2);
+  padding-left: 5px;
+}
+
+#invoice-details .brand-address p,
+#invoice-details .brand-address h1 {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+#invoice-details .invoice-address p,
+#invoice-details .invoice-address h1 {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+#invoice-details .brand-address h1 {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: normal;
+}
+
+#invoice-details .brand-address h1 span {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+#invoice-details .invoice-address h1 span {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+#invoice-details .invoice-address .title span {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  color: var(--text-color2);
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+#invoice-details .invoice-address .title {
+  margin-bottom: 20px !important;
+}
+
+#invoice-details .brand-address p span {
+  padding-left: 6px;
+}
+
+#invoice-details .invoice-address p span {
+  padding-left: 6px;
+}
+
+#invoice-details .address h1 {
+  font-size: 20px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  color: #aaaaaa;
+}
+
+#invoice-details .address h2 {
+  font-size: 20px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+#invoice-details .address h2 {
+  font-size: 18px;
+  font-family: var(--primary-font);
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+.invoice-details-table {
+  width: 100%;
+}
+
+.invoice-details-table .paid {
+  border: 1px solid #14cc52;
+  color: #14cc52;
+  border-radius: 5px;
+  font-family: var(--primary-font);
+  font-size: 26px;
+  font-weight: normal;
+  padding: 0px 10px;
+  margin-bottom: -30px;
+}
+
+.invoice-details-table {
+  margin-bottom: 20px;
+}
+
+.invoice-details-table thead tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--hover-color);
+}
+
+.invoice-details-table thead tr th {
+  width: 25%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.invoice-details-table tbody tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.invoice-details-table tbody tr:nth-child(1) {
+  border-bottom: 1px solid var(--gray);
+}
+
+.invoice-details-table tbody tr:nth-child(2) td:nth-child(5) {
+  border-bottom: 1px solid var(--gray);
+}
+
+.invoice-details-table tbody tr td {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: normal;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.invoice-details-table tbody tr td h1 {
+  color: var(--text-color) !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+}
+
+#invoice-details .condition {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+#invoice-details .condition .signature h1 {
+  position: absolute;
+  border-top: 1px solid var(--gray);
+  font-size: 16px;
+  font-family: var(--primary-font);
+  font-weight: normal;
+  color: var(--text-color);
+  padding: 10px 90px 0px 90px;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+#invoice-details .terms-condition p {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-family: var(--primary-font);
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+#invoice-details .invoice-details-button {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#invoice-details .invoice-details-button .cancel {
+  display: inline-block;
+  border: 1px solid var(--text-color);
+  background: none;
+  border-radius: 5px;
+  color: var(--text-color2);
+  font-size: 16px;
+  padding: 2px 20px;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#invoice-details .invoice-details-button .cancel:hover {
+  color: var(--white);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+#invoice-details .invoice-details-button .send {
+  display: inline-block;
+  border: 1px solid var(--text-color2);
+  background: var(--text-color2);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 16px;
+  padding: 2px 20px;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#invoice-details .invoice-details-button .send:hover {
+  border: 1px solid var(--text-color);
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.invoice-details-table-wrapper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.invoice-details-table-wrapper::-webkit-scrollbar {
+  height: 10px !important;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.invoice-details-table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  height: 10px !important;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #invoice-details .contact {
+    margin-bottom: 40px;
+  }
+
+  .invoice-details-table-wrapper {
+    overflow-x: scroll !important;
+  }
+
+  #invoice-details .condition .signature h1 {
+    font-size: 14px;
+    padding: 10px 20px 0px 20px;
+  }
+
+  #invoice-details .terms-condition p {
+    font-size: 13px;
+  }
+
+  #invoice-details .invoice-details-button {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #invoice-details .invoice-details-button .cancel {
+    font-size: 13px;
+    padding: 2px 15px;
+  }
+
+  #invoice-details .invoice-details-button .send {
+    font-size: 13px;
+    padding: 2px 15px;
+  }
+
+  #invoice-details .contact {
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  #invoice-details .contact .brand-address {
+    text-align: left;
+  }
+
+  #invoice-details .contact .brand-address:nth-child(2) {
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 20px;
+  }
+
+  #invoice-details .brand-address p,
+  #invoice-details .brand-address h1 {
+    font-size: 14px;
+  }
+
+  #invoice-details .brand-address h1 {
+    font-size: 14px;
+  }
+
+  #invoice-details .brand-address h1 span {
+    font-size: 16px;
+  }
+
+  .invoice-details-wrap .bredcam h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .invoice-details-wrap .bredcam a {
+    font-size: 14px;
+  }
+
+  .invoice-details-wrap .bredcam span {
+    font-size: 18px;
+  }
+}
+
+/* Finance Invoice Details End */
+
+/* .......................................................... */
+/* ......................Invoice Details Css End................. */
+/* .......................................................... */
+
+/* =============================================================== */
+/* ------------ Date-Picker CSS Start -------------- */
+/* ================================================================ */
+
+.input-datepicker-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.input-datepicker-wrapper .datepicker-picker {
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  box-shadow: var(--box-shadow);
+}
+
+.input-datepicker-wrapper input {
+  width: 100%;
+  border: 1px solid var(--gray);
+}
+
+.input-datepicker-wrapper input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.input-datepicker-wrapper .icon {
+  position: absolute;
+  right: 10px;
+  top: 22px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.datepicker-header .datepicker-controls .button {
+  color: var(--text-color);
+}
+
+.datepicker-view .dow {
+  color: var(--black);
+}
+
+.datepicker-cell.focused:not(.selected) {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.datepicker-view .days .datepicker-cell:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.datepicker-cell.selected {
+  background: orangered;
+}
+
+/* =============================================================== */
+/* ------------ Date-Picker CSS End -------------- */
+/* ================================================================ */
+
+/* =============================================================== */
+/* ------------ Filter Select Search Box Js Start -------------- */
+/* ================================================================ */
+
+.select-box-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.select-box-dropdown select {
+  display: none;
+}
+
+.select-dropdown-selected {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 10px;
+  height: 44px;
+  cursor: pointer;
+  border: 1px solid var(--stroke);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  align-items: center;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.select-dropdown-selected:hover {
+  border: 1px solid var(--primary-color);
+}
+
+.select-dropdown-selected .icon {
+  transition: transform 0.3s;
+}
+
+.select-dropdown-items {
+  position: absolute;
+  background-color: var(--gray);
+  border: 1px solid var(--stroke);
+  width: 100%;
+  z-index: 99 !important;
+  padding: 6px;
+  display: none;
+  border-radius: 4px;
+  max-height: 200px;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+
+.select-dropdown-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-dropdown-items::-webkit-scrollbar-thumb {
+  background: #007bff;
+  width: 8px;
+  border-radius: 5px;
+}
+
+.select-dropdown-items .option {
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.select-dropdown-items .option:hover {
+  background-color: var(--text-color);
+  color: var(--white);
+}
+
+.select-search-box {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--stroke);
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  z-index: 1;
+  display: none;
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid var(--stroke);
+  border-radius: 4px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.select-search-box:focus {
+  border-color: var(--primary-color);
+}
+
+.select-dropdown-items.show {
+  display: block;
+  z-index: 99;
+}
+
+.select-dropdown-items.show + .select-dropdown-selected .icon {
+  transform: rotate(180deg);
+}
+
+/* =============================================================== */
+/* ------------ Filter Select Search Box Js End -------------- */
+/* ================================================================ */
+
+/* .......................................................... */
+/* ......................Incomes Css Start................. */
+/* .......................................................... */
+.income-wrapper {
+  width: 100%;
+}
+.income-wrapper .income-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.income-wrapper .income-body .item {
+  width: 100%;
+  border: 1px solid var(--gray);
+  padding: 20px;
+  border-radius: 12px;
+}
+.income-wrapper .income-body .form-row label {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.income-wrapper .income-body .form-row {
+  width: 100% !important;
+}
+.income-wrapper .income-body .details-wrap {
+  background: var(--gray);
+  border-radius: 8px;
+  padding: 10px;
+}
+.income-wrapper .income-body .details-wrap p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+.income-wrapper .income-body .src-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.income-wrapper .income-body .src-wrapper .search {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  border-radius: 6px;
+}
+.income-wrapper .src-wrapper .search .src-btn {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: var(--text-color);
+  padding: 10px;
+}
+.income-wrapper .src-wrapper .src-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.income-wrapper .src-wrapper .src-btn svg path {
+  stroke: var(--white);
+}
+.income-wrapper .income-body .src-wrapper input {
+  width: 100%;
+  color: var(--text-color);
+  padding: 10px;
+  height: 44px;
+  border: none;
+}
+.income-wrapper .income-body .src-wrapper .customer-btn {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: var(--white) !important;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  border: none;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.income-wrapper .src-wrapper .customer-btn:hover {
+  opacity: 0.9;
+}
+
+.income-wrapper .src-wrapper .customer-btn svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.income-wrapper .wrap2 .invoice-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.income-wrapper .wrap2 .invoice-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+  padding-top: 10px;
+}
+
+.income-wrapper .wrap2 .invoice-header .num-date {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.income-wrapper .wrap2 .invoice-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.income-wrapper .wrap2 .invoice-header h4:nth-last-of-type(1) {
+  background: #000000;
+  color: var(--white);
+}
+
+.income-wrapper .wrap2 .filter-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.income-wrapper .wrap2 .filter-wrapper .form-row {
+  width: 100%;
+}
+
+.income-wrapper .wrap2 .filter-wrapper .form-row {
+  width: 100%;
+}
+
+.income-wrapper .wrap2 .add-product-btn {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: var(--white) !important;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  border: none;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.income-wrapper .wrap2 .add-product-btn:hover {
+  opacity: 0.9;
+}
+
+.income-wrapper .wrap2 .add-product-btn svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.income-wrapper .wrap2 .card-body {
+  padding: 0;
+}
+
+.income-wrapper .wrap2 .table-main {
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.income-wrapper .wrap2 .table-wrapper {
+  overflow: auto;
+}
+
+.income-wrapper .wrap2 .table-wrapper table {
+  width: 100%;
+}
+
+.income-wrapper .wrap2 .table-wrapper table thead {
+  border-bottom: 1px solid var(--gray);
+}
+
+.income-wrapper .wrap2 .table-wrapper table td {
+  border-bottom: none !important;
+  color: var(--text-color2);
+  font-size: 16px;
+}
+
+.income-wrapper .wrap2 .table-wrapper table th:nth-last-of-type(2),
+.income-wrapper .wrap2 .table-wrapper table td:nth-last-of-type(2) {
+  text-align: center;
+}
+
+.income-wrapper .wrap2 .table-wrapper table th:nth-last-of-type(1),
+.income-wrapper .wrap2 .table-wrapper table td:nth-last-of-type(1) {
+  text-align: right;
+}
+.income-wrapper .wrap2 .table-wrapper table th:nth-last-of-type(3),
+.income-wrapper .wrap2 .table-wrapper table td:nth-last-of-type(3) {
+  text-align: center;
+}
+
+.income-wrapper .wrap2 .table-wrapper table th {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.income-wrapper .wrap2 .table-wrapper table tbody {
+  border-bottom: 1px solid var(--gray);
+}
+
+.income-wrapper .wrap2 .date-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+}
+
+.income-wrapper .wrap2 .date-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  background: none !important;
+}
+
+.income-wrapper .wrap2 .date-container .fa-calendar-alt {
+  padding: 10px;
+  padding-right: 0px;
+}
+
+.daterangepicker .applyBtn {
+  background-color: var(--primary-color) !important;
+  border: none;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: var(--primary-color);
+  border-color: transparent;
+  color: var(--white);
+}
+
+.daterangepicker .drp-buttons .btn {
+  background: red;
+  color: var(--white);
+}
+
+.income-wrapper .wrap2 .total-wrap .group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.income-wrapper .wrap2 .total-wrap .group p {
+  color: var(--text-color2);
+  font-size: 18px;
+  margin: 0;
+}
+
+.income-wrapper .wrap2 .total-wrap .group input {
+  width: 40%;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text-color);
+  padding: 8px 10px;
+}
+.income-wrapper .wrap2 table input {
+  width: 70%;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text-color);
+  padding: 8px 10px;
+}
+.income-wrapper .wrap2 table .quantity {
+  width: 40%;
+}
+
+.income-wrapper .wrap2 .total-wrap hr {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.income-wrapper .wrap2 .total-wrap .group .color {
+  color: var(--text-color);
+}
+
+.income-wrapper .payment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--gray);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.income-wrapper .wrap2 .payment label {
+  color: var(--text-color);
+  font-size: 18px !important;
+  margin-bottom: 10px;
+}
+
+.income-wrapper .wrap2 .payment .submit-btn {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 40px;
+  white-space: nowrap;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: var(--white) !important;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  border: none;
+  margin: auto;
+  transition: 0.4s;
+}
+.income-wrapper .wrap2 .payment .submit-btn:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .income-wrapper .wrap2 .invoice-header {
+    flex-direction: column;
+  }
+  .income-wrapper .wrap2 .invoice-header h4 {
+    font-size: 14px;
+  }
+
+  .income-wrapper .wrap2 .table-wrapper table {
+    width: 1000px;
+  }
+}
+
+/* Payment Function Start */
+
+.income-wrapper .payment input {
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.income-wrapper .payment input:focus {
+  border-color: var(--primary-color);
+}
+
+.income-wrapper .payment .dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 10;
+  padding: 6px;
+  width: 100%;
+  border: 1px solid var(--stroke);
+  background-color: var(--gray);
+  border-radius: 8px;
+}
+
+.income-wrapper .payment .dropdown.active .dropdown-content {
+  display: block;
+}
+
+.income-wrapper .payment .dropdown.active .input-container::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.income-wrapper .payment .input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.income-wrapper .payment .input-container input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.income-wrapper .payment .input-container::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+/* Search Input */
+.income-wrapper .payment .search-input {
+  width: 100% !important;
+  padding: 8px;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+}
+
+/* Options */
+.income-wrapper .payment .options option {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.income-wrapper .payment .options option:hover {
+  background-color: var(--text-color);
+  color: var(--white);
+}
+
+/* Hidden bank-container */
+.income-wrapper .payment #bank-container {
+  position: absolute;
+  top: 0%;
+  right: 104%;
+  display: none;
+  flex-direction: row;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke);
+  gap: 10px;
+  align-items: center;
+  background: var(--white);
+}
+.income-wrapper .payment #bank-container input {
+  width: 200px;
+}
+
+.income-wrapper .payment #bkash-container {
+  position: absolute;
+  top: 0%;
+  right: 104%;
+  display: none;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke);
+  align-items: start;
+  background: var(--white);
+}
+.income-wrapper .payment #bkash-container input {
+  width: 200px;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.income-wrapper .payment #bkash-container .dropdown {
+  display: block !important;
+}
+
+.income-wrapper .payment .options {
+  max-height: 130px;
+
+  overflow-y: auto;
+  background-color: var(--gray);
+}
+
+@media screen and (max-width: 576px) {
+  .income-wrapper .payment #bank-container {
+    width: 100%;
+    top: 130%;
+    right: 0%;
+  }
+  .income-wrapper .payment #bkash-container input,
+  .income-wrapper .payment #bank-container input {
+    width: 100%;
+  }
+
+  .income-wrapper .payment #bkash-container {
+    top: 130%;
+    right: 0%;
+  }
+
+  .income-wrapper .payment {
+    margin-bottom: 280px;
+  }
+}
+
+/* Payment Function End */
+
+/* .......................................................... */
+/* ......................Incomes Css End................. */
+/* .......................................................... */

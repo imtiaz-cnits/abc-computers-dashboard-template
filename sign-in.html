@@ -1,124 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Sign In | Pos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- App favicon -->
-    <link
-      rel="shortcut icon"
-      href="./assets/icons/nexus-pos-logo.svg"
-      type="image/x-icon"
-    />
+<head>
+  <meta charset="utf-8" />
+  <title>Sign In | ABC Computers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap Css -->
-    <link
-      href="./assets/css/bootstrap.min.css"
-      id="bootstrap-style"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="./assets/icons/nexus-pos-logo.svg" type="image/x-icon" />
 
-    <!-- CSS Link-->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
+  <!-- Bootstrap Css -->
+  <link href="./assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
 
-  <body>
-    <div class="sign-in-signup">
-      <div class="container">
-        <!-- Sign in Form Start -->
-        <div class="card">
-          <div class="card-wrapper">
-            <div class="card-image">
-              <img src="./assets/img/sign-in-card-img.png" alt="" />
+  <!-- CSS Link-->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class="sign-in-signup">
+    <div class="container">
+      <!-- Sign in Form Start -->
+      <div class="card">
+        <div class="card-wrapper">
+          <div class="card-image">
+            <img src="./assets/img/sign-in-card-img.png" alt="" />
+          </div>
+
+          <div class="card-item">
+            <div class="brand-logo">
+              <!-- <img src="./assets/icons/login-page-logo.svg" alt="" /> -->
             </div>
+            <h2>Welcome to<br> ABC Computers</h2>
 
-            <div class="card-item">
-              <div class="brand-logo">
-                <img src="./assets/icons/login-page-logo.svg" alt="" />
-              </div>
-              <h2>Welcome to NEXUS POS</h2>
+            <form>
+              <input type="text" id="username" placeholder="Enter a mail" />
 
-              <form>
-                <input type="text" id="username" placeholder="Enter a mail" />
+              <label for="password">
+                <input type="password" id="password" placeholder="Enter password" />
+                <a href="#"><img class="hide-icon" src="./assets/icons/password-eye-icon.svg" alt="" /></a>
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
 
-                <label for="password">
-                  <input
-                    type="password"
-                    id="password"
-                    placeholder="Enter password"
-                  />
-                  <a href="#"
-                    ><img
-                      class="hide-icon"
-                      src="./assets/icons/password-eye-icon.svg"
-                      alt=""
-                  /></a>
-                </label>
-                <a href="#" class="forgot-password">Forgot Password?</a>
+              <button class="sign-in-btn" type="submit">SIGN IN</button>
+            </form>
 
-                <button class="sign-in-btn" type="submit">SIGN IN</button>
-              </form>
-
-              <div class="switch">
-                Dont have an account?
-                <a href="#" onclick="switchCard()">SIGN UP</a>
-              </div>
+            <div class="switch">
+              Dont have an account?
+              <a href="#" onclick="switchCard()">SIGN UP</a>
             </div>
           </div>
         </div>
-        <!-- Sign in Form End -->
-
-        <!-- Registration Form Start -->
-        <div class="card" style="display: none">
-          <div class="card-wrapper">
-            <div class="card-image">
-              <img src="./assets/img/sign-in-card-img.png" alt="" />
-            </div>
-
-            <div class="card-item">
-              <h2>Create an account</h2>
-              <form>
-                <input type="text" id="fullname" placeholder="Name" />
-
-                <input type="email" id="email" placeholder="Enter a email" />
-
-                <input type="number" id="number" placeholder="Phone number" />
-
-                <label for="password">
-                  <input
-                    type="password"
-                    id="password"
-                    placeholder="Enter password"
-                  />
-                  <a href="#"
-                    ><img
-                      class="hide-icon"
-                      src="./assets/icons/password-eye-icon.svg"
-                      alt=""
-                  /></a>
-                </label>
-
-                <label for="cheakbox" class="cheakbox">
-                  <input type="checkbox" />
-                  <h1>I accept the <a href="#">Privacy Policy.</a></h1>
-                </label>
-
-                <button class="sign-up-btn" type="submit">SIGN UP</button>
-              </form>
-              <div class="switch">
-                Already have an account?
-                <a href="#" onclick="switchCard()">SIGN IN</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Registration Form End -->
       </div>
-    </div>
+      <!-- Sign in Form End -->
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/app.js"></script>
-  </body>
+      <!-- Registration Form Start -->
+      <div class="card" style="display: none">
+        <div class="card-wrapper">
+          <div class="card-image">
+            <img src="./assets/img/sign-in-card-img.png" alt="" />
+          </div>
+
+          <div class="card-item">
+            <h2>Create an account</h2>
+            <form>
+              <input type="text" id="fullname" placeholder="Name" />
+
+              <input type="email" id="email" placeholder="Enter a email" />
+
+              <input type="number" id="number" placeholder="Phone number" />
+
+              <label for="password">
+                <input type="password" id="password" placeholder="Enter password" />
+                <a href="#"><img class="hide-icon" src="./assets/icons/password-eye-icon.svg" alt="" /></a>
+              </label>
+
+              <label for="cheakbox" class="cheakbox">
+                <input type="checkbox" />
+                <h1>I accept the <a href="#">Privacy Policy.</a></h1>
+              </label>
+
+              <button class="sign-up-btn" type="submit">SIGN UP</button>
+            </form>
+            <div class="switch">
+              Already have an account?
+              <a href="#" onclick="switchCard()">SIGN IN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Registration Form End -->
+    </div>
+  </div>
+
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
 </html>

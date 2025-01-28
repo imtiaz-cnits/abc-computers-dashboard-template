@@ -1223,7 +1223,7 @@ input::-webkit-inner-spin-button {
   z-index: 99;
 }
 
-.select-dropdown-items.show + .select-dropdown-selected .icon {
+.select-dropdown-items.show+.select-dropdown-selected .icon {
   transform: rotate(180deg);
 }
 
@@ -1237,6 +1237,7 @@ input::-webkit-inner-spin-button {
 .income-wrapper {
   width: 100%;
 }
+
 .income-wrapper .income-header h1 {
   font-size: 30px;
   font-weight: 600;
@@ -1244,36 +1245,43 @@ input::-webkit-inner-spin-button {
   padding-top: 10px;
   margin-bottom: 20px;
 }
+
 .income-wrapper .income-body .item {
   width: 100%;
   border: 1px solid var(--gray);
   padding: 20px;
   border-radius: 12px;
 }
+
 .income-wrapper .income-body .form-row label {
   color: var(--text-color);
   margin-bottom: 10px;
 }
+
 .income-wrapper .income-body .form-row {
   width: 100% !important;
 }
+
 .income-wrapper .income-body .details-wrap {
   background: var(--gray);
   border-radius: 8px;
   padding: 10px;
 }
+
 .income-wrapper .income-body .details-wrap p {
   margin-bottom: 10px;
   font-size: 16px;
   color: var(--text-color);
   font-weight: 600;
 }
+
 .income-wrapper .income-body .src-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
+
 .income-wrapper .income-body .src-wrapper .search {
   position: relative;
   width: 100%;
@@ -1281,6 +1289,7 @@ input::-webkit-inner-spin-button {
   border: 1px solid var(--stroke);
   border-radius: 6px;
 }
+
 .income-wrapper .src-wrapper .search .src-btn {
   display: inline-block;
   position: absolute;
@@ -1290,6 +1299,7 @@ input::-webkit-inner-spin-button {
   background: var(--text-color);
   padding: 10px;
 }
+
 .income-wrapper .src-wrapper .src-btn svg {
   width: 24px;
   height: 24px;
@@ -1298,6 +1308,7 @@ input::-webkit-inner-spin-button {
 .income-wrapper .src-wrapper .src-btn svg path {
   stroke: var(--white);
 }
+
 .income-wrapper .income-body .src-wrapper input {
   width: 100%;
   color: var(--text-color);
@@ -1305,6 +1316,7 @@ input::-webkit-inner-spin-button {
   height: 44px;
   border: none;
 }
+
 .income-wrapper .income-body .src-wrapper .customer-btn {
   display: inline-block;
   display: flex;
@@ -1325,6 +1337,7 @@ input::-webkit-inner-spin-button {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
 }
+
 .income-wrapper .src-wrapper .customer-btn:hover {
   opacity: 0.9;
 }
@@ -1408,6 +1421,7 @@ input::-webkit-inner-spin-button {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
 }
+
 .income-wrapper .wrap2 .add-product-btn:hover {
   opacity: 0.9;
 }
@@ -1455,6 +1469,7 @@ input::-webkit-inner-spin-button {
 .income-wrapper .wrap2 .table-wrapper table td:nth-last-of-type(1) {
   text-align: right;
 }
+
 .income-wrapper .wrap2 .table-wrapper table th:nth-last-of-type(3),
 .income-wrapper .wrap2 .table-wrapper table td:nth-last-of-type(3) {
   text-align: center;
@@ -1529,6 +1544,7 @@ input::-webkit-inner-spin-button {
   color: var(--text-color);
   padding: 8px 10px;
 }
+
 .income-wrapper .wrap2 table input {
   width: 70%;
   border: 1px solid var(--stroke);
@@ -1537,6 +1553,7 @@ input::-webkit-inner-spin-button {
   color: var(--text-color);
   padding: 8px 10px;
 }
+
 .income-wrapper .wrap2 table .quantity {
   width: 40%;
 }
@@ -1585,6 +1602,7 @@ input::-webkit-inner-spin-button {
   margin: auto;
   transition: 0.4s;
 }
+
 .income-wrapper .wrap2 .payment .submit-btn:hover {
   opacity: 0.9;
 }
@@ -1593,6 +1611,7 @@ input::-webkit-inner-spin-button {
   .income-wrapper .wrap2 .invoice-header {
     flex-direction: column;
   }
+
   .income-wrapper .wrap2 .invoice-header h4 {
     font-size: 14px;
   }
@@ -1702,6 +1721,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   background: var(--white);
 }
+
 .income-wrapper .payment #bank-container input {
   width: 200px;
 }
@@ -1718,6 +1738,7 @@ input::-webkit-inner-spin-button {
   align-items: start;
   background: var(--white);
 }
+
 .income-wrapper .payment #bkash-container input {
   width: 200px;
   padding: 12px 40px 12px 12px;
@@ -1745,6 +1766,7 @@ input::-webkit-inner-spin-button {
     top: 130%;
     right: 0%;
   }
+
   .income-wrapper .payment #bkash-container input,
   .income-wrapper .payment #bank-container input {
     width: 100%;

@@ -303,11 +303,9 @@ const DashboardSidebar = () => {
                     <DashboardSubmenuActiveLink href={"/dashboard/add-product"}>
                       ADD PRODUCT
                     </DashboardSubmenuActiveLink>
-                    <li>
-                      <a href="./category.html">
-                        <span className="text">CATEGORY</span>
-                      </a>
-                    </li>
+                    <DashboardSubmenuActiveLink href={"/dashboard/category"}>
+                      CATEGORY
+                    </DashboardSubmenuActiveLink>
                     <li>
                       <a href="#">
                         <span className="text">SUB CATEGORY</span>

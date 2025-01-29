@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Brands | ABC Computers</title>
+  <title>Sub-Category | ABC Computers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- App favicon -->
@@ -60,7 +60,6 @@
                   </linearGradient>
                 </defs>
               </svg>
-
             </span>
           </a>
         </div>
@@ -533,16 +532,16 @@
       <!-- Table -->
       <div class="data-table">
         <div class="invoice-btn">
-          <h1>PRODUCT BRANDS</h1>
+          <h1>PRODUCT CATEGORY</h1>
           <div class="table-btn-item">
-            <button type="submit" class="view-more-btn" data-bs-toggle="modal" data-bs-target="#addBrand">
+            <button type="submit" class="view-more-btn newcategory-open">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16 10.6667V21.3333M10.6667 16H21.3333M10.4 28H21.6C23.8402 28 24.9603 28 25.816 27.564C26.5686 27.1805 27.1805 26.5686 27.564 25.816C28 24.9603 28 23.8402 28 21.6V10.4C28 8.15979 28 7.03969 27.564 6.18404C27.1805 5.43139 26.5686 4.81947 25.816 4.43597C24.9603 4 23.8402 4 21.6 4H10.4C8.15979 4 7.03969 4 6.18404 4.43597C5.43139 4.81947 4.81947 5.43139 4.43597 6.18404C4 7.03969 4 8.15979 4 10.4V21.6C4 23.8402 4 24.9603 4.43597 25.816C4.81947 26.5686 5.43139 27.1805 6.18404 27.564C7.03969 28 8.15979 28 10.4 28Z"
                   stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
 
-              ADD PRODUCT BRAND
+              ADD CATEGORY
             </button>
           </div>
         </div>
@@ -552,7 +551,7 @@
           <!-- Search and Filter -->
           <div class="btn-group">
             <div class="input-group">
-              <input type="text" id="searchInput" class="form-control" placeholder="Search Brands..." />
+              <input type="text" id="searchInput" class="form-control" placeholder="Search Product/ Services..." />
               <!-- Entries per page -->
               <div style="
                     display: flex;
@@ -560,7 +559,26 @@
                     gap: 10px;
                     justify-content: center;
                   ">
+                <div class="input-group-append">
+                  <div class="dropdown-custom">
+                    <button class="dropdown-button">
+                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.5 6.24989H6.93125C7.0835 7.11901 7.53735 7.9066 8.21295 8.47414C8.88856 9.04168 9.74265 9.35282 10.625 9.35282C11.5074 9.35282 12.3614 9.04168 13.037 8.47414C13.7127 7.9066 14.1665 7.11901 14.3188 6.24989H27.5C27.6658 6.24989 27.8247 6.18405 27.9419 6.06684C28.0592 5.94963 28.125 5.79065 28.125 5.62489C28.125 5.45913 28.0592 5.30016 27.9419 5.18295C27.8247 5.06574 27.6658 4.99989 27.5 4.99989H14.3188C14.1665 4.13078 13.7127 3.34318 13.037 2.77564C12.3614 2.20811 11.5074 1.89697 10.625 1.89697C9.74265 1.89697 8.88856 2.20811 8.21295 2.77564C7.53735 3.34318 7.0835 4.13078 6.93125 4.99989H2.5C2.33424 4.99989 2.17527 5.06574 2.05806 5.18295C1.94085 5.30016 1.875 5.45913 1.875 5.62489C1.875 5.79065 1.94085 5.94963 2.05806 6.06684C2.17527 6.18405 2.33424 6.24989 2.5 6.24989ZM10.625 3.12489C11.1195 3.12489 11.6028 3.27152 12.0139 3.54622C12.425 3.82092 12.7455 4.21137 12.9347 4.66819C13.1239 5.125 13.1734 5.62767 13.077 6.11262C12.9805 6.59757 12.7424 7.04303 12.3928 7.39266C12.0431 7.74229 11.5977 7.98039 11.1127 8.07686C10.6278 8.17332 10.1251 8.12381 9.66829 7.93459C9.21148 7.74537 8.82103 7.42494 8.54633 7.01382C8.27162 6.6027 8.125 6.11935 8.125 5.62489C8.125 4.96185 8.38839 4.32597 8.85723 3.85713C9.32607 3.38829 9.96196 3.12489 10.625 3.12489ZM27.5 14.3749H23.0688C22.9165 13.5058 22.4627 12.7182 21.787 12.1506C21.1114 11.5831 20.2574 11.272 19.375 11.272C18.4926 11.272 17.6386 11.5831 16.963 12.1506C16.2873 12.7182 15.8335 13.5058 15.6812 14.3749H2.5C2.33424 14.3749 2.17527 14.4407 2.05806 14.558C1.94085 14.6752 1.875 14.8341 1.875 14.9999C1.875 15.1657 1.94085 15.3246 2.05806 15.4418C2.17527 15.559 2.33424 15.6249 2.5 15.6249H15.6812C15.8335 16.494 16.2873 17.2816 16.963 17.8491C17.6386 18.4167 18.4926 18.7278 19.375 18.7278C20.2574 18.7278 21.1114 18.4167 21.787 17.8491C22.4627 17.2816 22.9165 16.494 23.0688 15.6249H27.5C27.6658 15.6249 27.8247 15.559 27.9419 15.4418C28.0592 15.3246 28.125 15.1657 28.125 14.9999C28.125 14.8341 28.0592 14.6752 27.9419 14.558C27.8247 14.4407 27.6658 14.3749 27.5 14.3749ZM19.375 17.4999C18.8805 17.4999 18.3972 17.3533 17.9861 17.0786C17.575 16.8039 17.2545 16.4134 17.0653 15.9566C16.8761 15.4998 16.8266 14.9971 16.923 14.5122C17.0195 14.0272 17.2576 13.5818 17.6072 13.2321C17.9569 12.8825 18.4023 12.6444 18.8873 12.5479C19.3722 12.4515 19.8749 12.501 20.3317 12.6902C20.7885 12.8794 21.179 13.1998 21.4537 13.611C21.7284 14.0221 21.875 14.5054 21.875 14.9999C21.875 15.6629 21.6116 16.2988 21.1428 16.7677C20.6739 17.2365 20.038 17.4999 19.375 17.4999ZM27.5 23.7499H14.3188C14.1665 22.8808 13.7127 22.0932 13.037 21.5256C12.3614 20.9581 11.5074 20.647 10.625 20.647C9.74265 20.647 8.88856 20.9581 8.21295 21.5256C7.53735 22.0932 7.0835 22.8808 6.93125 23.7499H2.5C2.33424 23.7499 2.17527 23.8157 2.05806 23.933C1.94085 24.0502 1.875 24.2091 1.875 24.3749C1.875 24.5407 1.94085 24.6996 2.05806 24.8168C2.17527 24.934 2.33424 24.9999 2.5 24.9999H6.93125C7.0835 25.869 7.53735 26.6566 8.21295 27.2241C8.88856 27.7917 9.74265 28.1028 10.625 28.1028C11.5074 28.1028 12.3614 27.7917 13.037 27.2241C13.7127 26.6566 14.1665 25.869 14.3188 24.9999H27.5C27.6658 24.9999 27.8247 24.934 27.9419 24.8168C28.0592 24.6996 28.125 24.5407 28.125 24.3749C28.125 24.2091 28.0592 24.0502 27.9419 23.933C27.8247 23.8157 27.6658 23.7499 27.5 23.7499ZM10.625 26.8749C10.1305 26.8749 9.6472 26.7283 9.23607 26.4536C8.82495 26.1789 8.50452 25.7884 8.3153 25.3316C8.12608 24.8748 8.07657 24.3721 8.17304 23.8872C8.2695 23.4022 8.5076 22.9568 8.85723 22.6071C9.20686 22.2575 9.65232 22.0194 10.1373 21.9229C10.6222 21.8265 11.1249 21.876 11.5817 22.0652C12.0385 22.2544 12.429 22.5748 12.7037 22.986C12.9784 23.3971 13.125 23.8804 13.125 24.3749C13.125 25.0379 12.8616 25.6738 12.3928 26.1427C11.9239 26.6115 11.288 26.8749 10.625 26.8749Z"
+                          fill="black" />
+                      </svg>
 
+                      <span>Filter</span>
+                    </button>
+                    <div class="dropdown-menus">
+                      <a href="#" data-filter="all">All time</a>
+                      <a href="#" data-filter="today">Today</a>
+                      <a href="#" data-filter="7">Last 7 Days</a>
+                      <a href="#" data-filter="30">Last Month</a>
+                      <a href="#" data-filter="365">Last Year</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -645,20 +663,26 @@
               <table id="printTable" class="table table-hover">
                 <thead>
                   <tr>
-                    <th>SL NO</th>
-                    <th>BRAND NAME</th>
+                    <th>Serial No:</th>
+                    <th>CATEGORY</th>
+                    <th>SUB-CATEGORY</th>
                     <th>STATUS</th>
-                    <th>ACTION</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr data-date="2025-01-20">
                     <td>01</td>
-                    <td>ASUS</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LGED</span><span>BTRC</span><span>EGPB</span>
+                      </div>
+                    </td>
                     <td><span class="active">Active</span></td>
                     <td>
                       <div id="action_btn">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrand">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
                           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="6" fill="#F4FFF2" />
@@ -682,11 +706,16 @@
                   </tr>
                   <tr data-date="2025-01-20">
                     <td>02</td>
-                    <td>Lenovo</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LTM</span><span>OTM</span>
+                      </div>
+                    </td>
                     <td><span class="inactive">Inactive</span></td>
                     <td>
                       <div id="action_btn">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrand">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
                           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="6" fill="#F4FFF2" />
@@ -696,7 +725,7 @@
                           </svg>
                         </a>
 
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrand">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
                           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="6" fill="#FFD9D7" />
@@ -710,11 +739,16 @@
                   </tr>
                   <tr data-date="2025-01-20">
                     <td>01</td>
-                    <td>PC Power</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LGED</span><span>BTRC</span><span>EGPB</span>
+                      </div>
+                    </td>
                     <td><span class="active">Active</span></td>
                     <td>
                       <div id="action_btn">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrand">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
                           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="6" fill="#F4FFF2" />
@@ -738,11 +772,214 @@
                   </tr>
                   <tr data-date="2025-01-20">
                     <td>02</td>
-                    <td>Corsair</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LTM</span><span>OTM</span>
+                      </div>
+                    </td>
                     <td><span class="inactive">Inactive</span></td>
                     <td>
                       <div id="action_btn">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addBrand">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                            <path
+                              d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
+                              stroke="#5AA469" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                            <path
+                              d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
+                              stroke="#CA0B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-date="2025-01-20">
+                    <td>01</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LGED</span><span>BTRC</span><span>EGPB</span>
+                      </div>
+                    </td>
+                    <td><span class="active">Active</span></td>
+                    <td>
+                      <div id="action_btn">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                            <path
+                              d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
+                              stroke="#5AA469" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                            <path
+                              d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
+                              stroke="#CA0B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-date="2025-01-20">
+                    <td>02</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LTM</span><span>OTM</span>
+                      </div>
+                    </td>
+                    <td><span class="inactive">Inactive</span></td>
+                    <td>
+                      <div id="action_btn">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                            <path
+                              d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
+                              stroke="#5AA469" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                            <path
+                              d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
+                              stroke="#CA0B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-date="2025-01-20">
+                    <td>01</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LGED</span><span>BTRC</span><span>EGPB</span>
+                      </div>
+                    </td>
+                    <td><span class="active">Active</span></td>
+                    <td>
+                      <div id="action_btn">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                            <path
+                              d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
+                              stroke="#5AA469" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                            <path
+                              d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
+                              stroke="#CA0B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-date="2025-01-20">
+                    <td>02</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LTM</span><span>OTM</span>
+                      </div>
+                    </td>
+                    <td><span class="inactive">Inactive</span></td>
+                    <td>
+                      <div id="action_btn">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                            <path
+                              d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
+                              stroke="#5AA469" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                            <path
+                              d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
+                              stroke="#CA0B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-date="2025-01-20">
+                    <td>01</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LGED</span><span>BTRC</span><span>EGPB</span>
+                      </div>
+                    </td>
+                    <td><span class="active">Active</span></td>
+                    <td>
+                      <div id="action_btn">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                            <path
+                              d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
+                              stroke="#5AA469" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                            <path
+                              d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
+                              stroke="#CA0B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-date="2025-01-20">
+                    <td>02</td>
+                    <td>License</td>
+                    <td>
+                      <div class="sub-cg">
+                        <span>LTM</span><span>OTM</span>
+                      </div>
+                    </td>
+                    <td><span class="inactive">Inactive</span></td>
+                    <td>
+                      <div id="action_btn">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
                           <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="6" fill="#F4FFF2" />
@@ -806,6 +1043,177 @@
 
       <!-- Table Action Button Modal Start -->
 
+      <!-- Action Button Edit Modal Start -->
+      <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="heading-wrap">
+              <button type="button" class="close-btn close" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <h2 class="heading">Edit</h2>
+            </div>
+            <form>
+              <!-- Select Dropdowns with Add Buttons -->
+              <div class="row">
+                <div class="form-row select-input-box col-lg-6">
+                  <label for="select-to">Select Brand *</label>
+                  <div class="select-box-dropdown">
+                    <div class="select-dropdown-selected">
+                      <span>Select Brand</span>
+                      <span class="icon"><i class="fas fa-angle-down"></i></span>
+                    </div>
+                    <div class="select-dropdown-items">
+                      <input type="text" class="select-search-box" placeholder="Search..." />
+                      <option class="option">Select-1</option>
+                      <option class="option">Select-2</option>
+                      <option class="option">Select-2</option>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row select-input-box col-lg-6">
+                  <label for="select-to">Select Category *</label>
+                  <div class="select-box-dropdown">
+                    <div class="select-dropdown-selected">
+                      <span>Select Category</span>
+                      <span class="icon"><i class="fas fa-angle-down"></i></span>
+                      <!-- Font Awesome angle-down icon -->
+                    </div>
+                    <div class="select-dropdown-items">
+                      <input type="text" class="select-search-box" placeholder="Search..." />
+                      <option class="option">Select-1</option>
+                      <option class="option">Select-2</option>
+                      <option class="option">Select-2</option>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <h3 class="heading2">Product Information</h3>
+                  <div class="mb-2">
+                    <div class="upload-profile">
+                      <div class="item">
+                        <div class="img-box">
+                          <svg width="32" height="32" viewBox="0 0 50 50" fill="red" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="50" height="50" fill="url(#pattern0_1204_6)" fill-opacity="0.5" />
+                            <defs>
+                              <pattern id="pattern0_1204_6" patternContentUnits="objectBoundingBox" width="1"
+                                height="1">
+                                <use xlink:href="#image0_1204_6" transform="scale(0.005)" />
+                              </pattern>
+                              <image id="image0_1204_6" width="200" height="200"
+                                xlink:href="data:image/png;base64,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" />
+                            </defs>
+                          </svg>
+                        </div>
+
+                        <div class="profile-wrapper">
+                          <label class="custom-file-input-wrapper">
+                            <input type="file" class="custom-file-input" aria-label="Upload Photo" />
+                          </label>
+                          <p>PNG,JPEG or GIF (up to 1 MB)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <label for="">Product Name *</label>
+                    <input type="text" placeholder="Product Name" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Product Model *</label>
+                    <input type="text" placeholder="Product Model" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">EMEI No *</label>
+                    <input type="text" placeholder="EMEI No" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Buying Price *</label>
+                    <input type="text" placeholder="Buying Price" />
+                  </div>
+                  <div class="form-row">
+                    <label for="vanilla-datepicker">Buying Date *</label>
+                    <div class="input-datepicker-wrapper">
+                      <input type="text" class="datepicker-input" placeholder="dd/mm/yyyy" />
+                      <i class="fas fa-calendar-alt icon"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <h3 class="heading2">Buyer Information</h3>
+                  <div class="mb-2">
+                    <div class="upload-profile">
+                      <div class="item">
+                        <div class="img-box">
+                          <svg width="32" height="32" viewBox="0 0 50 50" fill="red" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="50" height="50" fill="url(#pattern0_1204_6)" fill-opacity="0.5" />
+                            <defs>
+                              <pattern id="pattern0_1204_6" patternContentUnits="objectBoundingBox" width="1"
+                                height="1">
+                                <use xlink:href="#image0_1204_6" transform="scale(0.005)" />
+                              </pattern>
+                              <image id="image0_1204_6" width="200" height="200"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAMsklEQVR4Ae2daYwtRRmG34uAIF5RDMTlYkABvSJuP1BccMHgRtyiqNG4EI1bcCOBaDCaKEYMYlwIEBRRf7j9UHFBRBJQEgyIIJtKLmiAXGVRUAT35bzDNH40M13Vc/qcqT71VHLS1dN9znQ99T1dvVR3SSQIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCECgCAIbJD1G0islHSHpg5I+wmdUDFxnrrtDJe0ryXVKmpLAQZK+JOnmiRT/5bNQDG6SdJqkZ04ZI1V+/WBJFyHEQgnRtYO7UJJ3hqQEgZ0lfQUxqhGjLY2PFjYmYqTaxXtL2oIc1crRyPIrSXtWa8EqBd8s6QbkqF6ORpKtkrzDJEl6kKRrkQM5WjHwG0m71m7INpLOboFp9iJMuXJ3Ru2Xg9+6BjlundwP+aWky/mMioHrzHXXd8f3hlpbkfv2uL/xJ0kflfToWmEtULl9w/fYyU3D2zJl+f1k/R0XqPzZRfFd1Zy9iQ/BfJ5CWiwCmyT9ODMGDl+soueVxk1uSpDTJW2X93OsNUIC95Z0ZkYcXDrCsk21yftlQLlakg/DSItN4P6Srs+Ih30WG8PdS/fODCDu1Eaqg8DrM+LBF3SqSacmgPim4b2qoUFBt5d0SyImTqoJ07kJGO6PRaqLgM83u85Jf1gTjksSMPysB6kuAscnYuKCmnCkrmAdXRMMyrpEwDvFrhbkspo4ucdmFwwEqSka7ixrShD3nKgmIUg1VZ1dUAQJqBAkwCC7RABBQiAgSIBBFkHaMYAgbSLM04KEGECQAIPsEgEECYGAIAEGWQRpxwCCtIkwTwsSYgBBAgyySwQQJAQCggQYZBGkHQMI0ibCPC1IiIExCbKbpGdIetny50BeRxNqcrgsggSWpQvy4Mm2fmj57Smr9Rm7QtIHJFkg0vQEECQwLFUQPyN9jKS/JTpTRmnumKzrV/v7oR/S2gkgSGBXoiC7S7q4hxhREuf9vMJDQhnJ9iOAIIFXaYLsIem6KeRoZPHrMh8aykk2nwCCBFYlCeI3p6Qe4GoEyJn6ackdQlnJ5hFAkMCpJEFOHKDlaIvziVBWsnkEECRwKkUQv8r03zMQ5J+ToeMeHspLNk0AQQKjUgT53AzkaFqTT4fykk0TQJDAqARB/EpTvxS7CeihpzfW/ur+UN85WQQJlEoQ5IAZytHI9rhQZrLdBBAk8ClBkDfPQZDXhDKT7SaAIIFPCYL41ULNnn5W0/eGMpPtJoAggU8Jgrh7yKzEaH73yFBmst0EECTwKUGQd81BEB/GkfIIIEjgVIIgz5+DIO4mT8ojgCCBUwmCeOCWf81Qkr/XOrZeqOc+WQQJtEoQxJvjV+o35wtDT78ZyjumrLv87y3paZKeN+ml/AJJz5LkS9YPmGFBECTALUWQF81QkOeE8pac3VXS6yR9YbnTZqrrjUed/Z4kX4DwiLVDJQQJJEsRZIOk82YgyVmhrCVmt5H0EklnDHCY6bq0LA+csqAIEgCWIog36VGS/jKgJLcW3FHRO4RXTz6/HrC8zaHp7ZI+PsVhGIIUKog3y3vTIU7Y3YvXV8dKTD4cOn8GYjSCNNObJb1xDQAQJEArqQVpNstvLfnrFAHkVuiQ5scKm75Hkq+qNUE8j+m3e7YmCBKCpkRBvHmPXeNz6RdK2hzKV0rWTzZ+dc5iRPmulOQ3xOQkBAmUShXEm+jhpz1ud84LHCyGOyT6pLe0tFHSOesoRyPKVZI2ZcBBkACpZEHCZi7dD3iTJD9C+0VJp0k6TtJhBZ+Ie/t3ntP5RiNBanqNJN+Y7UoIEuiMRZCwyaPJ7jI5F/pZAS1HWxpfLexKCBLoIEiAMWDWN/1+UaAclgVBelQ0gvSAlbmqT4Z9Utzec5cyjyCZFenVEKQHrIxVfRLsk+FSZFhpOxAkoyKbVRCkITH91G+F9EnwSkFZ0t8QpEddI0gPWB2r7jW5onbtCOSwqAjSUZHtRQjSJtJ/3jcmt45EDgTpWb8I0hNYa/X9JN0wIjkQpFWBqVkESRFaffkTJLlDYEnnFznbwiHW6nV6jyVjEmQnSQdJ8it8PiXp1MkQB6dMHqc9VpJfyuCAnVdXkydJumWEctCC3EOB7j+ULoifm/Cjpt/KHG3KhzufkfTI7mJPtdSPwP55pHIgSM+qL1mQp0v6+RoD8T+SvtyjB2sutmcP/FBXziHR0OtwiJVb24XeKNx2uVOig3za4PjDpMvHS3vw6FrVD2BN85zKtGUZ6vspQTwgatf/cv+yalJpLYhHmTozUUFdlbfSMot21JQ1+uJ1eNBppbIM8beUIM9N8D9hSpaj+npJgsy6a/iH11gzL5fkR3iHCM4SfiMliM/7frJKeT1MxZ5r5DjKr5UiiLuGX7RKpQwZVL7i1ScdumBymGVKEPNxfXy3VR9bJD25D7xFWLcEQXaTdGmrMoaUov1bx2dW3KsGeoFE+/+v93yOIA0iv7jOh5cWw094VpfWWxCPZz7kyLa5wffZxKhTfiXPEG9Xyd2eea7XR5DqhGgXeD0FeZgkN9vzDI74v05eRRI/276ocrj8CNK2oGN+vQTxyLO/XUc5GlG+HgLGz2q/f0aj7Tb/r4QpgnQI0V60HoLsI+n6AuSIwbpIV6liuVbKI0jbgo75eQuyr6TfFSbHSkG0yH9DkA4h2ovmKYg7E96EHOt2ztVIjyBtCzrm5yXI/pL+iBzrLoclQZAOIdqL5iHIUyX5DmyzB2O6viwQpG1Bx/ysBfGISEMOaYBc08uFIB1CtBfNUhB3eruDlqO4lhNB2hZ0zM9KEA+pNu/X/NO65LUuCNIhRHvRLAR5xeSG2z9oOYprOZodSB9Bdlw+qZ92WLd23I1mfmhBXrvg3TSaIBvzNEcQj7D7ydYhskcirqqruy0eUhAPT5AamXXMgbUo254jyDdWOQJwDwi/mLuaNJQg75A0xCOyixKEJZcjJchTVpGjKdPHqrFjoBbkiATQBizTvJPoWXNKCfK+RH3+FEH+X5FHJ2C44+GsK5TfH5ZxShAG0AlBP+0hloc0JoDHxQBBggCpLIKMK7iH2BkhSMqKsBxBECSEw1KWQ6xABEEQJIQDgrRhIAiCtGOCFiQQQRAECeGwlEWQQARBECSEA4K0YSAIgrRjghYkEEEQBAnhsJRFkEAEQRAkhAOCtGEgCIK0Y4IWJBBBEAQJ4bCURZBABEEQJIQDgrRhIAiCtGOCFiQQQRAECeGwlEWQQGRaQTbT3X103f33CvW/UhZBApVpBblP5vjlQ3TT5jemb+1ul7R9qP+VsggSqEwriH/qFFqR0bQiHlkrlRAkEBpCkI2S/Jwye/iyGXjk2p1C3a+WRZBAJjU+YOqZ9Oan3GwfLulsSZdJupxPEQxcF2dJepuk7ZrKSkxTgvg3q0mXJPb8x1RDgoI2BPzCuK6jgQuaFWuYnpOA8bUaIFDGuxH4TiIm/IbFatLnEzBulLRtNTQoqF85mhrL5cSaMPm8oas59TKPGU6qg8BhGfHwljpQ3FlKD6qZEsTDNd+vJiiVlnUXSVsz4iF1o3Hh8F2RAeX7GTeYFg5MRQXaQdKPMuLg4oqY3FXUd2eAcStzrqRNd32LzKIQ2EPS+Zkx8PZFKXSfcvjmkU/GU4daXn6bpOMkPV7Shj7/hHWLIuC6e+LyGCDufpJT9z78cktTZfLYHjmQ4joGu2X5DfG+I89nHAyulpQrRaxvD45UbfIe5QdrkCQCJN9/JzMWZqdXa0YouEcOugZJerekYwnytW7nVZJ8hYskyZfwci71rRU23xtXK3NdjeMSpvYEvqpxJS1J9S2JOyXungqWWpf7ylaqGwqtwbhag9z68liTJ0vyw3CkBIEDJZ1Ha1JNa+J7XR7Ek9STwAGSTpLkYYBz90SsNw5WPs84QdL+PWOC1Vch8AhJhyw/hHOUJD9UxWc8DI5crrsXcgK+SoTzZwhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIrAeB/wGvKkLooomNCAAAAABJRU5ErkJggg==" />
+                            </defs>
+                          </svg>
+                        </div>
+
+                        <div class="profile-wrapper">
+                          <label class="custom-file-input-wrapper">
+                            <input type="file" class="custom-file-input" aria-label="Upload Photo" />
+                          </label>
+                          <p>PNG,JPEG or GIF (up to 1 MB)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <label for="">Name *</label>
+                    <input type="text" placeholder="Name" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Mobile *</label>
+                    <input type="text" placeholder="Mobile" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Email *</label>
+                    <input type="text" placeholder="Email" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Address *</label>
+                    <input type="text" placeholder="Address" />
+                  </div>
+                  <div class="form-row">
+                    <label for="">NID *</label>
+                    <input type="text" placeholder="NID" />
+                  </div>
+                  <div class="form-row">
+                    <label for="vanilla-datepicker">Date of Birth *</label>
+                    <div class="input-datepicker-wrapper">
+                      <input type="text" class="datepicker-input" placeholder="dd/mm/yyyy" />
+                      <i class="fas fa-calendar-alt icon"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button type="submit" class="btn-save">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Action Button Edit Modal Start -->
+
       <!-- Confirmation Modal Start -->
       <section class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
         aria-hidden="true">
@@ -837,26 +1245,107 @@
       <!-- Table Action Button Modal End -->
 
       <!-- ADD Product Modal Start -->
-      <section class="modal fade" id="addBrand" tabindex="-1" aria-labelledby="addBrandLabel" aria-hidden="true">
+      <section class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="addProductLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="heading-wrap">
               <button type="button" class="close-btn close" data-bs-dismiss="modal" aria-label="Close">
                 <i class="fa-solid fa-xmark"></i>
               </button>
-              <h2 class="heading">ADD NEW BRAND</h2>
+              <h2 class="heading">ADD NEW PRODUCT/SERVICES</h2>
             </div>
             <form>
+              <div class="row">
+                <div class="form-row select-input-box col-12">
+                  <label for="select-to">COMPANY NAME</label>
+                  <div class="select-box-dropdown">
+                    <div class="select-dropdown-selected">
+                      <span>Select company</span>
+                      <span class="icon"><i class="fas fa-angle-down"></i></span>
+                    </div>
+                    <div class="select-dropdown-items">
+                      <input type="text" class="select-search-box" placeholder="Search here..." />
+                      <option class="option">Company A</option>
+                      <option class="option">Company B</option>
+                      <option class="option">Company C</option>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="form-row select-input-box col-8">
+                  <label for="select-to">CATEGORY NAME</label>
+                  <div class="select-box-dropdown">
+                    <div class="select-dropdown-selected">
+                      <span>Select category</span>
+                      <span class="icon"><i class="fas fa-angle-down"></i></span>
+                    </div>
+                    <div class="select-dropdown-items">
+                      <input type="text" class="select-search-box" placeholder="Search here..." />
+                      <option class="option">Category 1</option>
+                      <option class="option">Category 2</option>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row col-4">
+                  <button type="button" class="category-btn newcategory-open">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16 10.6667V21.3333M10.6667 16H21.3333M10.4 28H21.6C23.8402 28 24.9603 28 25.816 27.564C26.5686 27.1805 27.1805 26.5686 27.564 25.816C28 24.9603 28 23.8402 28 21.6V10.4C28 8.15979 28 7.03969 27.564 6.18404C27.1805 5.43139 26.5686 4.81947 25.816 4.43597C24.9603 4 23.8402 4 21.6 4H10.4C8.15979 4 7.03969 4 6.18404 4.43597C5.43139 4.81947 4.81947 5.43139 4.43597 6.18404C4 7.03969 4 8.15979 4 10.4V21.6C4 23.8402 4 24.9603 4.43597 25.816C4.81947 26.5686 5.43139 27.1805 6.18404 27.564C7.03969 28 8.15979 28 10.4 28Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    ADD CATEGORY
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="form-row select-input-box col-8">
+                  <label for="select-to">SUB-CATEGORY NAME</label>
+                  <div class="select-box-dropdown">
+                    <div class="select-dropdown-selected">
+                      <span>Select sub-category</span>
+                      <span class="icon"><i class="fas fa-angle-down"></i></span>
+                    </div>
+                    <div class="select-dropdown-items">
+                      <input type="text" class="select-search-box" placeholder="Search here..." />
+                      <option class="option">Sub-category 1</option>
+                      <option class="option">Sub-category 2</option>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row col-4">
+                  <button type="button" class="category-btn subnewcategory-open">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16 10.6667V21.3333M10.6667 16H21.3333M10.4 28H21.6C23.8402 28 24.9603 28 25.816 27.564C26.5686 27.1805 27.1805 26.5686 27.564 25.816C28 24.9603 28 23.8402 28 21.6V10.4C28 8.15979 28 7.03969 27.564 6.18404C27.1805 5.43139 26.5686 4.81947 25.816 4.43597C24.9603 4 23.8402 4 21.6 4H10.4C8.15979 4 7.03969 4 6.18404 4.43597C5.43139 4.81947 4.81947 5.43139 4.43597 6.18404C4 7.03969 4 8.15979 4 10.4V21.6C4 23.8402 4 24.9603 4.43597 25.816C4.81947 26.5686 5.43139 27.1805 6.18404 27.564C7.03969 28 8.15979 28 10.4 28Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    ADD SUB-CATEGORY
+                  </button>
+                </div>
+              </div>
 
               <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                   <div class="form-row">
-                    <label for="">BRAND NAME</label>
+                    <label for="">PRODUCT CODE</label>
+                    <input type="text" placeholder="Type here.." required />
+                  </div>
+                  <div class="form-row">
+                    <label for="">PRODUCT PRICE</label>
+                    <input type="text" placeholder="Type here.." required />
+                  </div>
+                  <div class="form-row">
+                    <label for="">PRODUCT NAME</label>
                     <input type="text" placeholder="Type here.." required />
                   </div>
 
+                </div>
+                <div class="col-lg-6">
                   <div class="form-row select-input-box">
-                    <label for="select-to">BRAND STATUS</label>
+                    <label for="select-to">PRODUCT STATUS</label>
                     <div class="select-box-dropdown">
                       <div class="select-dropdown-selected">
                         <span>Select status</span>
@@ -869,42 +1358,13 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="form-row">
-                    <label for="photo">BRAND PHOTO</label>
-                    <div class="upload-profile">
-                      <div class="item">
-                        <div class="img-box">
-                          <svg width="32" height="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <rect width="50" height="50" fill="url(#pattern0_1204_6)" fill-opacity="0.5"></rect>
-                            <defs>
-                              <pattern id="pattern0_1204_6" patternContentUnits="objectBoundingBox" width="1"
-                                height="1">
-                                <use xlink:href="#image0_1204_6" transform="scale(0.005)"></use>
-                              </pattern>
-                              <image id="image0_1204_6" width="200" height="200"
-                                xlink:href="data:image/png;base64,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">
-                              </image>
-                            </defs>
-                          </svg>
-                        </div>
-
-                        <div class="profile-wrapper">
-                          <label class="custom-file-input-wrapper m-0">
-                            <input type="file" class="custom-file-input" aria-label="Upload Photo">
-                          </label>
-                          <p>PNG,JPEG or GIF (Upto 1 MB)</p>
-                        </div>
-                      </div>
-                    </div>
+                    <label for="">DESCRIPTION</label>
+                    <textarea name="text" id="text" placeholder="Type here.." required></textarea>
                   </div>
-
-
-
                 </div>
                 <div class="actions">
-                  <button type="submit" class="btn-save">SUBMIT</button>
+                  <button type="submit" class="btn-save">Submit</button>
                 </div>
               </div>
             </form>
@@ -913,7 +1373,7 @@
       </section>
       <!--  ADD Product Modal End -->
 
-      <!-- Add Product modal to ADD Category Modal Start -->
+      <!-- ADD Category Modal Start -->
       <div class="newcategory">
         <div class="newcategory-content">
           <h2>ADD CATEGORY</h2>
@@ -940,6 +1400,36 @@
                   </div>
                 </div>
               </div>
+
+              <div class="form-row">
+                <label for="photo">BRAND PHOTO</label>
+                <div class="upload-profile">
+                  <div class="item">
+                    <div class="img-box">
+                      <svg width="32" height="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="50" height="50" fill="url(#pattern0_1204_6)" fill-opacity="0.5"></rect>
+                        <defs>
+                          <pattern id="pattern0_1204_6" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_1204_6" transform="scale(0.005)"></use>
+                          </pattern>
+                          <image id="image0_1204_6" width="200" height="200"
+                            xlink:href="data:image/png;base64,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">
+                          </image>
+                        </defs>
+                      </svg>
+                    </div>
+
+                    <div class="profile-wrapper">
+                      <label class="custom-file-input-wrapper m-0">
+                        <input type="file" class="custom-file-input" aria-label="Upload Photo">
+                      </label>
+                      <p>PNG,JPEG or GIF (Upto 1 MB)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="button-group">
               <!-- <button type="button" class="cancel-btn newcategory-close">

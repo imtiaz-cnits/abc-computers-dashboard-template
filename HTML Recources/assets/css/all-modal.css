@@ -364,12 +364,14 @@ Reset Default CSS End
   transition: 0.3s;
 }
 
-#exampleModal .upload-profile .item {
+#exampleModal .upload-profile .item,
+.newcategory .upload-profile .item {
   display: flex !important;
   gap: 10px;
 }
 
-#exampleModal .upload-profile .item .img-box {
+#exampleModal .upload-profile .item .img-box,
+.newcategory .upload-profile .item .img-box {
   width: 84px;
   height: 70px;
   border-radius: 6px;
@@ -379,11 +381,13 @@ Reset Default CSS End
   align-items: center;
 }
 
-#exampleModal .profile-wrapper {
+#exampleModal .profile-wrapper,
+.newcategory .profile-wrapper {
   width: 100%;
 }
 
-#exampleModal .parent {
+#exampleModal .parent,
+.newcategory .parent {
   width: 100%;
   height: 100%;
   display: inline-flex;
@@ -391,13 +395,15 @@ Reset Default CSS End
   flex-direction: column;
 }
 
-#exampleModal .profile-wrapper p {
+#exampleModal .profile-wrapper p,
+.newcategory .profile-wrapper p {
   margin: 8px 0px 0px 0px;
   font-size: 14px;
   color: var(--text-color2);
 }
 
-#exampleModal .custom-file-input-wrapper {
+#exampleModal .custom-file-input-wrapper,
+.newcategory .custom-file-input-wrapper {
   font-family: var(--primary-font);
   position: relative;
   width: 100%;
@@ -412,7 +418,8 @@ Reset Default CSS End
   cursor: pointer;
 }
 
-#exampleModal .custom-file-input {
+#exampleModal .custom-file-input,
+.newcategory .custom-file-input {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -423,7 +430,8 @@ Reset Default CSS End
   cursor: pointer;
 }
 
-#exampleModal .custom-file-input-wrapper input[type="file"] {
+#exampleModal .custom-file-input-wrapper input[type="file"],
+.newcategory .custom-file-input-wrapper input[type="file"] {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -434,7 +442,8 @@ Reset Default CSS End
   cursor: pointer;
 }
 
-#exampleModal .custom-file-input-wrapper::before {
+#exampleModal .custom-file-input-wrapper::before,
+.newcategory .custom-file-input-wrapper::before {
   content: "";
   position: absolute;
   margin: 0px 118px 0px auto;
@@ -445,12 +454,14 @@ Reset Default CSS End
   background-position: center;
 }
 
-#exampleModal .custom-file-input-wrapper::after {
+#exampleModal .custom-file-input-wrapper::after,
+.newcategory .custom-file-input-wrapper::after {
   content: "Upload Photo";
   margin-right: -20px !important;
 }
 
-#exampleModal .upload p {
+#exampleModal .upload p,
+.newcategory .upload p {
   font-size: 12px;
   color: var(--text-color2);
 }

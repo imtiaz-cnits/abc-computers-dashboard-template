@@ -378,9 +378,13 @@ body[data-sidebar-size="sm"] #page-topbar {
   margin-top: -6px;
 }
 
+.brand-name {
+  margin-left: 6px;
+}
+
 .navbar-brand-box .brand-name svg {
-  width: 90px !important;
-  height: 50px !important;
+  width: 140px !important;
+  height: 100px !important;
 }
 
 .search-icon {

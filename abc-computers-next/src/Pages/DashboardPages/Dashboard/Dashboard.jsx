@@ -1,5 +1,4 @@
 import React from "react";
-import "@/assets/css/table-function.css";
 
 const Dashboard = () => {
   return (

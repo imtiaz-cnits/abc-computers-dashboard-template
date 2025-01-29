@@ -1,4 +1,4 @@
-import Incomes from "@/Pages/Dashboard/Incomes/Incomes";
+import Incomes from "@/Pages/DashboardPages/Incomes/Incomes";
 import React from "react";
 
 export const metadata = {

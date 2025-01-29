@@ -7,7 +7,6 @@ import React, { useEffect } from "react";
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
-
     const script = document.createElement("script");
     script.src = "https://code.jquery.com/jquery-3.6.4.min.js";
     script.async = true;
@@ -95,6 +94,37 @@ const DashboardLayout = ({ children }) => {
         e.stopPropagation();
       });
 
+      // Sidebar Close on Outside Click
+      document.addEventListener("click", function (event) {
+        const sidebar = document.querySelector(".vertical-menu");
+        const toggleButton = document.querySelector(".vertical-menu-btn");
+
+        if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+          document.body.classList.remove("sidebar-enable");
+        }
+      });
+
+      // Initialize Sidebar Active State on Page Load
+      document.addEventListener("DOMContentLoaded", function () {
+        setSidebarMenuActive();
+      });
+
+      // Responsive Sidebar Toggle
+      function toggleSidebar() {
+        const currentSize = document.body.getAttribute("data-sidebar-size");
+
+        document.body.classList.toggle("sidebar-enable");
+        if (window.innerWidth >= 992) {
+          document.body.setAttribute(
+            "data-sidebar-size",
+            currentSize === "sm" ? "lg" : "sm"
+          );
+        }
+      }
+      document.querySelectorAll(".vertical-menu-btn").forEach((button) => {
+        button.addEventListener("click", toggleSidebar);
+      });
+
       // .............Table copy,csv,pdf,xlse,print all file Start...............//
 
       $(document).ready(function () {
@@ -155,6 +185,183 @@ const DashboardLayout = ({ children }) => {
         });
       });
       // .............Table copy,csv,pdf,xlse,print all file End...............//
+
+
+
+      // Create Product modal to ADD Category Modal End................
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.querySelector(".newcategory");
+        const openModalBtn = document.querySelector(".newcategory-open");
+        const closeModalBtn = modal.querySelector(".newcategory-close");
+
+        // Open Modal
+        openModalBtn.addEventListener("click", () => {
+          modal.classList.add("show");
+        });
+
+        // Close Modal
+        closeModalBtn.addEventListener("click", () => {
+          modal.classList.remove("show");
+        });
+
+        // Close Modal when clicking outside the modal content
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.classList.remove("show");
+          }
+        });
+      });
+
+      // Create Product modal to ADD Category Modal End................
+
+      // Create Product modal to ADD Sub Category Modal End................
+      document.addEventListener("DOMContentLoaded", () => {
+        const categoryModal = document.querySelector(".subnewcategory");
+        const openCategoryModalBtn = document.querySelector(".subnewcategory-open"); // Button to open the modal
+        const closeCategoryModalBtn = categoryModal.querySelector(
+          ".subnewcategory-close"
+        );
+
+        // Open Modal
+        if (openCategoryModalBtn) {
+          openCategoryModalBtn.addEventListener("click", () => {
+            categoryModal.classList.add("show");
+          });
+        }
+
+        // Close Modal
+        closeCategoryModalBtn.addEventListener("click", () => {
+          categoryModal.classList.remove("show");
+        });
+
+        // Close Modal when clicking outside the modal content
+        categoryModal.addEventListener("click", (event) => {
+          if (event.target === categoryModal) {
+            categoryModal.classList.remove("show");
+          }
+        });
+      });
+
+      // Create Product modal to ADD sub Category Modal End................
+
+
+      // Filter Select Search Box Js Start................................................................
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".select-box-dropdown");
+
+        dropdowns.forEach(function (dropdown) {
+          const dropdownSelected = dropdown.querySelector(
+            ".select-dropdown-selected"
+          );
+          const dropdownItems = dropdown.querySelector(".select-dropdown-items");
+          const searchBox = dropdown.querySelector(".select-search-box");
+          const icon = dropdown.querySelector(".icon i");
+
+          // Function to toggle visibility of search box based on number of items
+          function toggleSearchInput() {
+            const itemCount = dropdownItems.querySelectorAll(".option").length;
+            if (itemCount >= 4) {
+              searchBox.style.display = "block";
+            } else {
+              searchBox.style.display = "none";
+            }
+          }
+
+          // Function to position the dropdown dynamically
+          function positionDropdown() {
+            const rect = dropdown.getBoundingClientRect(); // Get the position of the dropdown container
+            const dropdownHeight = dropdownItems.offsetHeight;
+            const spaceBelow = window.innerHeight - rect.bottom; // Space below the dropdown
+            const spaceAbove = rect.top; // Space above the dropdown
+
+            if (spaceBelow < dropdownHeight && spaceAbove > dropdownHeight) {
+              // If not enough space below, position the dropdown above
+              dropdownItems.style.bottom = `${rect.height}px`; // Place above, accounting for the selected height
+              dropdownItems.style.top = "auto";
+            } else {
+              // Otherwise, position the dropdown below
+              dropdownItems.style.top = "100%";
+              dropdownItems.style.bottom = "auto";
+            }
+          }
+
+          // Toggle dropdown visibility
+          dropdownSelected.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            // Close all other dropdowns
+            dropdowns.forEach(function (otherDropdown) {
+              if (otherDropdown !== dropdown) {
+                otherDropdown
+                  .querySelector(".select-dropdown-items")
+                  .classList.remove("show");
+                otherDropdown
+                  .querySelector(".icon i")
+                  .classList.remove("fa-angle-up");
+                otherDropdown.querySelector(".icon i").classList.add("fa-angle-down");
+              }
+            });
+
+            // Toggle current dropdown visibility
+            dropdownItems.classList.toggle("show");
+
+            // Toggle icon rotation
+            if (dropdownItems.classList.contains("show")) {
+              icon.classList.remove("fa-angle-down");
+              icon.classList.add("fa-angle-up");
+            } else {
+              icon.classList.remove("fa-angle-up");
+              icon.classList.add("fa-angle-down");
+            }
+
+            // Call function to toggle search input visibility
+            toggleSearchInput();
+
+            // Position the dropdown based on available space
+            if (dropdownItems.classList.contains("show")) {
+              positionDropdown();
+            }
+          });
+
+          // Filter dropdown items based on search
+          searchBox.addEventListener("input", function () {
+            const filter = searchBox.value.toLowerCase();
+            const items = dropdownItems.querySelectorAll(".option");
+
+            items.forEach(function (item) {
+              const text = item.textContent.toLowerCase();
+              if (text.includes(filter)) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+
+          // Close the dropdown if clicked outside
+          document.addEventListener("click", function (e) {
+            if (!e.target.closest(".select-box-dropdown")) {
+              dropdownItems.classList.remove("show");
+              icon.classList.remove("fa-angle-up");
+              icon.classList.add("fa-angle-down");
+              searchBox.style.display = "none";
+            }
+          });
+
+          // Select dropdown item
+          dropdownItems.addEventListener("click", function (e) {
+            if (e.target.tagName === "OPTION") {
+              dropdownSelected.querySelector("span").textContent =
+                e.target.textContent;
+              dropdownItems.classList.remove("show");
+              icon.classList.remove("fa-angle-up");
+              icon.classList.add("fa-angle-down");
+              searchBox.style.display = "none";
+            }
+          });
+        });
+      });
+      // Filter Select Search Box Js End........................................................
     };
 
     return () => {

@@ -1,4 +1,4 @@
-import Brands from "@/Pages/Dashboard/Brands/Brands";
+import Brands from "@/Pages/DashboardPages/Brands/Brands";
 import React from "react";
 
 export const metadata = {

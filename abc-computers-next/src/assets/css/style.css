@@ -230,7 +230,6 @@ html ::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(../img/Sign-In-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

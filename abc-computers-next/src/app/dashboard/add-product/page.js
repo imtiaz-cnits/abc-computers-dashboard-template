@@ -1,4 +1,4 @@
-import AddProduct from "@/Pages/Dashboard/AddProduct/AddProduct";
+import AddProduct from "@/Pages/DashboardPages/AddProduct/AddProduct";
 import React from "react";
 
 export const metadata = {

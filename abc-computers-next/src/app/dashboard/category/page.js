@@ -1,4 +1,4 @@
-import Category from "@/Pages/Dashboard/Category/Category";
+import Category from "@/Pages/DashboardPages/Category/Category";
 import React from "react";
 
 export const metadata = {

@@ -1,6 +1,7 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import favicon from "@/assets/img/abc-logo-icon.svg";
+import '@/assets/css/style.css'
 
 export const metadata = {
   title: "Home | ABC Computers",

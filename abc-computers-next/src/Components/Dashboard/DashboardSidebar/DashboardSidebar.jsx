@@ -7,7 +7,7 @@ const DashboardSidebar = () => {
     <div className="vertical-menu">
       <button
         type="button"
-        className="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn vertical-menu-btn2"
+        className="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn"
       >
         <svg
           width="40"

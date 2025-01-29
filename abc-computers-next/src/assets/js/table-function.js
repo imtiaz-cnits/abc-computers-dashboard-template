@@ -1,5 +1,4 @@
 // ..............Table searchbar filter Start.......................//
-
 const searchInput = document.querySelector("#searchInput");
 searchInput.addEventListener("input", function () {
   const filter = searchInput.value.toLowerCase();

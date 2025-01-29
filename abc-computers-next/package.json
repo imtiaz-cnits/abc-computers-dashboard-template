@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.8",

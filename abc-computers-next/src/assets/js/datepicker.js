@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 // ...................DatePicker js Start............//
 
 // Initialize Vanilla Datepicker

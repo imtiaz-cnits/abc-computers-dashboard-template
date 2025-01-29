@@ -1,19 +1,22 @@
-import DashboardNavbar from "@/Components/Dashboard/DashboardNavbar/DashboardNavbar";
 import React from "react";
-import DashboardSidebar from "@/Components/Dashboard/DashboardSidebar/DashboardSidebar";
 import "@/assets/css/navbar-sidebar.css";
+import "@/assets/css/all-modal.css";
+import "@/assets/css/table-function.css";
 import "@/assets/css/style.css";
+import DashboardLayout from "@/Layouts/DashboardLayout/DashboardLayout";
 
-const DashboardLayout = ({ children }) => {
+export const metadata = {
+  title: "Dashboard | ABC Computers",
+};
+
+const layout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <DashboardNavbar />
-        <DashboardSidebar />
-        {children}
+        <DashboardLayout>{children}</DashboardLayout>
       </body>
     </html>
   );
 };
 
-export default DashboardLayout;
+export default layout;

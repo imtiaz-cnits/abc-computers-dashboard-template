@@ -6,13 +6,16 @@ import React, { useEffect } from "react";
 
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+
+    require("@/assets/js/bootstrap.bundle.min.js")
+
     const script = document.createElement("script");
     script.src = "https://code.jquery.com/jquery-3.6.4.min.js";
     script.async = true;
     document.body.appendChild(script);
 
     script.onload = () => {
+
       $(".menu > ul > li").click(function (e) {
         // Store the active parent link in localStorage
         const activeLink = $(this).find("> a").attr("href");

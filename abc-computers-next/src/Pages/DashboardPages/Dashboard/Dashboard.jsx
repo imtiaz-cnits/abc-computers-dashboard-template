@@ -1,4 +1,8 @@
 import React from "react";
+import cardImg1 from "@/assets/icons/card-projects.svg"
+import cardImg2 from "@/assets/icons/card-employe.svg"
+import cardImg3 from "@/assets/icons/card-client.svg"
+import cardImg4 from "@/assets/icons/card-reports.svg"
 
 const Dashboard = () => {
   return (
@@ -12,7 +16,7 @@ const Dashboard = () => {
                 <div className="card-body">
                   <div className="align-items-center">
                     <div className="card-icon">
-                      <img src="./assets/icons/card-projects.svg" alt="" />
+                      <img src={cardImg1.src} alt="" />
                     </div>
                     <div>
                       <h4>Projects</h4>
@@ -57,7 +61,7 @@ const Dashboard = () => {
                 <div className="card-body">
                   <div className="align-items-center">
                     <div className="card-icon">
-                      <img src="./assets/icons/card-employe.svg" alt="" />
+                      <img src={cardImg2.src} alt="" />
                     </div>
                     <div>
                       <h4>Employees</h4>
@@ -72,7 +76,7 @@ const Dashboard = () => {
                 <div className="card-body">
                   <div className="align-items-center">
                     <div className="card-icon">
-                      <img src="./assets/icons/card-client.svg" alt="" />
+                      <img src={cardImg3.src} alt="" />
                     </div>
                     <div>
                       <h4>Clients</h4>
@@ -87,7 +91,7 @@ const Dashboard = () => {
                 <div className="card-body">
                   <div className="align-items-center">
                     <div className="card-icon">
-                      <img src="./assets/icons/card-reports.svg" alt="" />
+                      <img src={cardImg4.src} alt="" />
                     </div>
                     <div>
                       <h4>Reports</h4>

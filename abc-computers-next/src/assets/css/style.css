@@ -230,9 +230,6 @@ html ::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .sign-in-signup .container .card {
@@ -361,10 +358,12 @@ html ::-webkit-scrollbar-thumb {
   font-family: var(--primary-font);
 }
 
-.sign-in-signup .switch a {
+.sign-in-signup .switch span {
   color: var(--text-color);
   text-decoration: none;
   text-decoration: underline !important;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .sign-in-signup .password-container {

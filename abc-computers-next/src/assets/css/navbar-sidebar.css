@@ -661,7 +661,11 @@ body[data-sidebar-size="sm"] #page-topbar {
   background: var(--hover-color);
 }
 
-.vertical-menu .sidebar.active .menu-btn i {
+.vertical-menu .submenu-active .arrow-icon {
+  width: 10px;
+}
+
+.vertical-menu .submenu-active.active .arrow-icon {
   transform: rotate(180deg);
 }
 
@@ -669,7 +673,7 @@ body[data-sidebar-size="sm"] #page-topbar {
   display: none;
 }
 
-.vertical-menu .sidebar.active .menu ul li .arrow {
+.sidebar-enable .menu ul li .arrow-icon {
   display: none;
 }
 

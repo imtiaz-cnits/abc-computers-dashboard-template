@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import userImg from "@/assets/img/navbar-profile-logo.png";
 import { DropdownButton } from "react-bootstrap";
+import Link from "next/link";
 
 const DashboardNavbar = () => {
   return (
@@ -10,7 +11,7 @@ const DashboardNavbar = () => {
         <div className="d-flex">
           {/* <!-- LOGO --> */}
           <div className="navbar-brand-box">
-            <a href="index.html" className="logo logo-dark">
+            <Link href="/dashboard" className="logo logo-dark">
               <span className="logo-sm">
                 <svg
                   width="52"
@@ -76,7 +77,7 @@ const DashboardNavbar = () => {
                             
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
 
           <button
@@ -169,7 +170,7 @@ const DashboardNavbar = () => {
                   <div className="d-flex">
                     <div className="flex-shrink-0 me-3">
                       <img
-                        src={userImg?.src?.src}
+                        src={userImg?.src}
                         className="rounded-circle avatar-sm"
                         alt="user-pic"
                       />

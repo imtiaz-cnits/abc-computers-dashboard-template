@@ -2,6 +2,7 @@ import React from "react";
 import DashboardActiveLink from "../DashboardActiveLink/DashboardActiveLink";
 import DashboardSubmenuActiveLink from "../DashboardSubmenuActiveLink/DashboardSubmenuActiveLink";
 import { FaAngleDown } from "react-icons/fa";
+import Link from "next/link";
 
 const DashboardSidebar = () => {
   return (
@@ -29,7 +30,7 @@ const DashboardSidebar = () => {
       </button>
       {/* <!-- LOGO Box --> */}
       <div className="navbar-brand-box">
-        <a href="index.html" className="logo logo-dark">
+        <Link href="/dashboard" className="logo logo-dark">
           <span className="logo-sm">
             <svg
               width="52"
@@ -243,7 +244,7 @@ const DashboardSidebar = () => {
               </svg>
             </span>
           </span>
-        </a>
+        </Link>
       </div>
       {/* <!-- Logo Box End --> */}
 

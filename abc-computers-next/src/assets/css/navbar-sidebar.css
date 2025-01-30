@@ -1228,6 +1228,7 @@ body[data-layout-mode="bordered"] .vertical-menu {
   align-content: flex-start;
   align-items: flex-start;
   padding-top: 6px !important;
+  overflow: hidden;
 }
 
 .simplebar-offset {

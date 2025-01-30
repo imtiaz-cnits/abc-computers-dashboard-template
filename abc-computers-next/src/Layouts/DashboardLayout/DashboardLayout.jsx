@@ -3,6 +3,7 @@
 import DashboardNavbar from "@/Components/Dashboard/DashboardNavbar/DashboardNavbar";
 import DashboardSidebar from "@/Components/Dashboard/DashboardSidebar/DashboardSidebar";
 import React, { useEffect } from "react";
+import { jsPDF } from "jspdf";
 
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
@@ -164,17 +165,21 @@ const DashboardLayout = ({ children }) => {
 
         // Export table to PDF
         $("#pdfBtn").click(function () {
-          const { jsPDF } = window.jspdf;
+          const { jsPDF } = window?.jspdf;
           const doc = new jsPDF();
 
-          // Add the table content to the PDF
-          doc.autoTable({
-            html: "table",
-            startY: 10,
-          });
+          if (doc.autoTable) {
+            // Add the table content to the PDF
+            doc.autoTable({
+              html: "table",
+              startY: 10,
+            });
 
-          // Save the PDF
-          doc.save("data.pdf");
+            // Save the PDF
+            doc.save("data.pdf");
+          } else {
+            console.error("autoTable is not loaded.");
+          }
         });
 
         // Export table to XLSX

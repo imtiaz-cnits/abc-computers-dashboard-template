@@ -8,8 +8,6 @@ const DashboardActiveLink = ({ children, href }) => {
 
   const active = href === pathname;
 
-  console.log(href, pathname);
-
   return (
     <li className={`active-link ${active && "active"}`}>
       <Link href={href}>{children}</Link>

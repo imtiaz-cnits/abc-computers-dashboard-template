@@ -1,5 +1,5 @@
+import "@/assets/css/bootstrap.min.css";
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import favicon from "@/assets/img/abc-logo-icon.svg";
 import '@/assets/css/style.css'
 

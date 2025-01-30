@@ -1,14 +1,23 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import signInCardImg from "@/assets/img/sign-in-card-img.png"
 import passwordEye from "@/assets/icons/password-eye-icon.svg"
 import signInBg from "@/assets/img/Sign-In-bg.png"
 
 const Login = () => {
+
+    const [login, setLogin] = useState(true)
+
     return (
         <div className="sign-in-signup">
-            <div className="container" style={{ background: `url(${signInBg?.src})` }}>
+            <div className="container" style={{
+                background: `url(${signInBg?.src})`, backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+            }}>
                 {/* <!-- Sign in Form Start --> */}
-                <div className="card">
+                <div className="card" style={{ display: `${login ? "block" : "none"}` }}>
                     <div className="card-wrapper">
                         <div className="card-image">
                             <img src={signInCardImg?.src} alt="" />
@@ -34,7 +43,7 @@ const Login = () => {
 
                             <div className="switch">
                                 Dont have an account?
-                                <a href="#">SIGN UP</a>
+                                <span onClick={() => setLogin(false)}>SIGN UP</span>
                             </div>
                         </div>
                     </div>
@@ -42,7 +51,7 @@ const Login = () => {
                 {/* <!-- Sign in Form End --> */}
 
                 {/* <!-- Registration Form Start --> */}
-                <div className="card" style={{ display: "none" }}>
+                <div className="card" style={{ display: `${login ? "none" : "block"}` }}>
                     <div className="card-wrapper">
                         <div className="card-image">
                             <img src={signInCardImg?.src} alt="" />
@@ -71,14 +80,14 @@ const Login = () => {
                             </form>
                             <div className="switch">
                                 Already have an account?
-                                <a href="#">SIGN IN</a>
+                                <span onClick={() => setLogin(true)}>SIGN IN</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* <!-- Registration Form End --> */}
             </div>
-        </div>
+        </div >
     );
 };
 

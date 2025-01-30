@@ -1,6 +1,7 @@
 import React from "react";
 import DashboardActiveLink from "../DashboardActiveLink/DashboardActiveLink";
 import DashboardSubmenuActiveLink from "../DashboardSubmenuActiveLink/DashboardSubmenuActiveLink";
+import { FaAngleDown } from "react-icons/fa";
 
 const DashboardSidebar = () => {
   return (
@@ -155,7 +156,7 @@ const DashboardSidebar = () => {
                   <stop offset="1" stopColor="#337836" />
                 </linearGradient>
               </defs>
-                        
+
             </svg>
           </span>
           <span className="logo-lg">
@@ -220,7 +221,7 @@ const DashboardSidebar = () => {
                   <stop offset="1" stopColor="#337836" />
                 </linearGradient>
               </defs>
-                        
+
             </svg>
 
             <span className="brand-name">
@@ -294,7 +295,7 @@ const DashboardSidebar = () => {
                     </svg>
 
                     <span className="text">PRODUCTS</span>
-                    <i className="arrow fa-solid fa-angle-down"></i>
+                    <FaAngleDown className="arrow-icon" />
                   </a>
                   <ul className="sub-menu">
                     <DashboardSubmenuActiveLink href={"/dashboard/brands"}>
@@ -378,7 +379,7 @@ const DashboardSidebar = () => {
                     </svg>
 
                     <span className="text">CUSTOMERS</span>
-                    <i className="arrow fa-solid fa-angle-down"></i>
+                    <FaAngleDown className="arrow-icon" />
                   </a>
                   <ul className="sub-menu">
                     <li>
@@ -430,7 +431,7 @@ const DashboardSidebar = () => {
                     </svg>
 
                     <span className="text">REPORTS</span>
-                    <i className="arrow fa-solid fa-angle-down"></i>
+                    <FaAngleDown className="arrow-icon" />
                   </a>
                   <ul className="sub-menu">
                     <li>

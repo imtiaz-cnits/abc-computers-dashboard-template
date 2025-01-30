@@ -9,7 +9,7 @@ const DashboardActiveLink = ({ children, href }) => {
   const active = href === pathname;
 
   return (
-    <li className={`active-link ${active && "active"}`}>
+    <li className={`active-link ${active ? "active" : ""}`}>
       <Link href={href}>{children}</Link>
     </li>
   );

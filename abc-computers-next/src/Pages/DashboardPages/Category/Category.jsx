@@ -44,7 +44,7 @@ const Category = () => {
                   type="text"
                   id="searchInput"
                   className="form-control"
-                  placeholder="Search Product/ Services..."
+                  placeholder="Search Category"
                 />
                 {/* <!-- Entries per page --> */}
                 <div
@@ -617,7 +617,7 @@ const Category = () => {
             <form>
               <div className="row">
                 <div className="form-row select-input-box col-lg-6">
-                  <label htmlFor="select-to">Select Brand *</label>
+                  <label htmlFor="select-status">Select Brand *</label>
                   <div className="select-box-dropdown">
                     <div className="select-dropdown-selected">
                       <span>Select Brand</span>
@@ -632,7 +632,7 @@ const Category = () => {
                   </div>
                 </div>
                 <div className="form-row select-input-box col-lg-6">
-                  <label htmlFor="select-to">Select Category *</label>
+                  <label htmlFor="select-status">Select Category *</label>
                   <div className="select-box-dropdown">
                     <div className="select-dropdown-selected">
                       <span>Select Category</span>
@@ -843,33 +843,25 @@ const Category = () => {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="form-row">
-                      <label htmlFor="">BRAND NAME</label>
+                      <label htmlFor="">CATEGORY NAME</label>
                       <input type="text" placeholder="Type here.." required />
                     </div>
 
                     <div className="form-row select-input-box">
-                      <label htmlFor="select-to">BRAND STATUS</label>
-                      <div className="select-box-dropdown">
-                        <div className="select-dropdown-selected">
-                          <span>Select status</span>
-                          <span className="icon">
-                            <i className="fas fa-angle-down"></i>
-                          </span>
-                        </div>
-                        <div className="select-dropdown-items">
-                          <input
-                            type="text"
-                            className="select-search-box"
-                            placeholder="Search here..."
-                          />
-                          <option className="option">Active</option>
-                          <option className="option">Inactive</option>
-                        </div>
-                      </div>
+                      <label htmlFor="select-status">STATUS</label>
+                      <select
+                        id="select-status"
+                        className="select-status"
+                        required
+                      >
+                        <option value="">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                      </select>
                     </div>
 
                     <div className="form-row">
-                      <label htmlFor="photo">BRAND PHOTO</label>
+                      <label htmlFor="photo">CATEGORY PHOTO</label>
                       <div className="upload-profile">
                         <div className="item">
                           <div className="img-box"></div>
@@ -924,33 +916,25 @@ const Category = () => {
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="form-row">
-                      <label htmlFor="">BRAND NAME</label>
+                      <label htmlFor="">CATEGORY NAME</label>
                       <input type="text" placeholder="Type here.." required />
                     </div>
 
                     <div className="form-row select-input-box">
-                      <label htmlFor="select-to">BRAND STATUS</label>
-                      <div className="select-box-dropdown">
-                        <div className="select-dropdown-selected">
-                          <span>Select status</span>
-                          <span className="icon">
-                            <i className="fas fa-angle-down"></i>
-                          </span>
-                        </div>
-                        <div className="select-dropdown-items">
-                          <input
-                            type="text"
-                            className="select-search-box"
-                            placeholder="Search here..."
-                          />
-                          <option className="option">Active</option>
-                          <option className="option">Inactive</option>
-                        </div>
-                      </div>
+                      <label htmlFor="select-status">STATUS</label>
+                      <select
+                        id="select-status"
+                        className="select-status"
+                        required
+                      >
+                        <option value="">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                      </select>
                     </div>
 
                     <div className="form-row">
-                      <label htmlFor="photo">BRAND PHOTO</label>
+                      <label htmlFor="photo">CATEGORY PHOTO</label>
                       <div className="upload-profile">
                         <div className="item">
                           <div className="img-box"></div>

@@ -6,8 +6,7 @@ import React, { useEffect } from "react";
 
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
-
-    require("@/assets/js/bootstrap.bundle.min.js")
+    require("@/assets/js/bootstrap.bundle.min.js");
 
     const script = document.createElement("script");
     script.src = "https://code.jquery.com/jquery-3.6.4.min.js";
@@ -15,7 +14,6 @@ const DashboardLayout = ({ children }) => {
     document.body.appendChild(script);
 
     script.onload = () => {
-
       $(".menu > ul > li").click(function (e) {
         // Store the active parent link in localStorage
         const activeLink = $(this).find("> a").attr("href");
@@ -102,7 +100,10 @@ const DashboardLayout = ({ children }) => {
         const sidebar = document.querySelector(".vertical-menu");
         const toggleButton = document.querySelector(".vertical-menu-btn");
 
-        if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+        if (
+          !sidebar.contains(event.target) &&
+          !toggleButton.contains(event.target)
+        ) {
           document.body.classList.remove("sidebar-enable");
         }
       });
@@ -189,8 +190,6 @@ const DashboardLayout = ({ children }) => {
       });
       // .............Table copy,csv,pdf,xlse,print all file End...............//
 
-
-
       // Create Product modal to ADD Category Modal End................
       document.addEventListener("DOMContentLoaded", () => {
         const modal = document.querySelector(".newcategory");
@@ -220,7 +219,9 @@ const DashboardLayout = ({ children }) => {
       // Create Product modal to ADD Sub Category Modal End................
       document.addEventListener("DOMContentLoaded", () => {
         const categoryModal = document.querySelector(".subnewcategory");
-        const openCategoryModalBtn = document.querySelector(".subnewcategory-open"); // Button to open the modal
+        const openCategoryModalBtn = document.querySelector(
+          ".subnewcategory-open"
+        ); // Button to open the modal
         const closeCategoryModalBtn = categoryModal.querySelector(
           ".subnewcategory-close"
         );
@@ -247,7 +248,6 @@ const DashboardLayout = ({ children }) => {
 
       // Create Product modal to ADD sub Category Modal End................
 
-
       // Filter Select Search Box Js Start................................................................
       document.addEventListener("DOMContentLoaded", function () {
         const dropdowns = document.querySelectorAll(".select-box-dropdown");
@@ -256,39 +256,36 @@ const DashboardLayout = ({ children }) => {
           const dropdownSelected = dropdown.querySelector(
             ".select-dropdown-selected"
           );
-          const dropdownItems = dropdown.querySelector(".select-dropdown-items");
+          const dropdownItems = dropdown.querySelector(
+            ".select-dropdown-items"
+          );
           const searchBox = dropdown.querySelector(".select-search-box");
+          const options = dropdownItems.querySelectorAll(".option");
           const icon = dropdown.querySelector(".icon i");
 
-          // Function to toggle visibility of search box based on number of items
           function toggleSearchInput() {
-            const itemCount = dropdownItems.querySelectorAll(".option").length;
-            if (itemCount >= 4) {
+            if (options.length >= 4) {
               searchBox.style.display = "block";
             } else {
               searchBox.style.display = "none";
             }
           }
 
-          // Function to position the dropdown dynamically
           function positionDropdown() {
-            const rect = dropdown.getBoundingClientRect(); // Get the position of the dropdown container
+            const rect = dropdown.getBoundingClientRect();
             const dropdownHeight = dropdownItems.offsetHeight;
-            const spaceBelow = window.innerHeight - rect.bottom; // Space below the dropdown
-            const spaceAbove = rect.top; // Space above the dropdown
+            const spaceBelow = window.innerHeight - rect.bottom;
+            const spaceAbove = rect.top;
 
             if (spaceBelow < dropdownHeight && spaceAbove > dropdownHeight) {
-              // If not enough space below, position the dropdown above
-              dropdownItems.style.bottom = `${rect.height}px`; // Place above, accounting for the selected height
+              dropdownItems.style.bottom = `${rect.height}px`;
               dropdownItems.style.top = "auto";
             } else {
-              // Otherwise, position the dropdown below
               dropdownItems.style.top = "100%";
               dropdownItems.style.bottom = "auto";
             }
           }
 
-          // Toggle dropdown visibility
           dropdownSelected.addEventListener("click", function (e) {
             e.stopPropagation();
 
@@ -301,49 +298,47 @@ const DashboardLayout = ({ children }) => {
                 otherDropdown
                   .querySelector(".icon i")
                   .classList.remove("fa-angle-up");
-                otherDropdown.querySelector(".icon i").classList.add("fa-angle-down");
+                otherDropdown
+                  .querySelector(".icon i")
+                  .classList.add("fa-angle-down");
               }
             });
 
-            // Toggle current dropdown visibility
+            // Toggle current dropdown
             dropdownItems.classList.toggle("show");
 
-            // Toggle icon rotation
-            if (dropdownItems.classList.contains("show")) {
-              icon.classList.remove("fa-angle-down");
-              icon.classList.add("fa-angle-up");
-            } else {
-              icon.classList.remove("fa-angle-up");
-              icon.classList.add("fa-angle-down");
-            }
+            // Toggle icon
+            icon.classList.toggle(
+              "fa-angle-up",
+              dropdownItems.classList.contains("show")
+            );
+            icon.classList.toggle(
+              "fa-angle-down",
+              !dropdownItems.classList.contains("show")
+            );
 
-            // Call function to toggle search input visibility
+            // Show/hide search box
             toggleSearchInput();
 
-            // Position the dropdown based on available space
+            // Position dropdown correctly
             if (dropdownItems.classList.contains("show")) {
               positionDropdown();
             }
           });
 
-          // Filter dropdown items based on search
           searchBox.addEventListener("input", function () {
             const filter = searchBox.value.toLowerCase();
-            const items = dropdownItems.querySelectorAll(".option");
-
-            items.forEach(function (item) {
-              const text = item.textContent.toLowerCase();
-              if (text.includes(filter)) {
-                item.style.display = "block";
-              } else {
-                item.style.display = "none";
-              }
+            options.forEach(function (option) {
+              option.style.display = option.textContent
+                .toLowerCase()
+                .includes(filter)
+                ? "block"
+                : "none";
             });
           });
 
-          // Close the dropdown if clicked outside
           document.addEventListener("click", function (e) {
-            if (!e.target.closest(".select-box-dropdown")) {
+            if (!dropdown.contains(e.target)) {
               dropdownItems.classList.remove("show");
               icon.classList.remove("fa-angle-up");
               icon.classList.add("fa-angle-down");
@@ -351,9 +346,8 @@ const DashboardLayout = ({ children }) => {
             }
           });
 
-          // Select dropdown item
           dropdownItems.addEventListener("click", function (e) {
-            if (e.target.tagName === "OPTION") {
+            if (e.target.classList.contains("option")) {
               dropdownSelected.querySelector("span").textContent =
                 e.target.textContent;
               dropdownItems.classList.remove("show");
@@ -364,6 +358,7 @@ const DashboardLayout = ({ children }) => {
           });
         });
       });
+
       // Filter Select Search Box Js End........................................................
     };
 

@@ -9,7 +9,12 @@ const Category = () => {
           <div className="invoice-btn">
             <h1>PRODUCT CATEGORY</h1>
             <div className="table-btn-item">
-              <button type="submit" className="view-more-btn newcategory-open">
+              <button
+                type="submit"
+                className="view-more-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#addCategory"
+              >
                 <svg
                   width="32"
                   height="32"
@@ -255,29 +260,69 @@ const Category = () => {
                       <td>Desktop</td>
                       <td>
                         <div className="sub-cg">
-                          <span>LGED</span><span>BTRC</span><span>EGPB</span>
+                          <span>LGED</span>
+                          <span>BTRC</span>
+                          <span>EGPB</span>
                         </div>
                       </td>
-                      <td><span className="active">Active</span></td>
+                      <td>
+                        <span className="active">Active</span>
+                      </td>
                       <td>
                         <div id="action_btn">
-                          <a href="#" className="subnewcategory-open">
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                          <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#updateCategory"
+                          >
+                            <svg
+                              width="44"
+                              height="44"
+                              viewBox="0 0 44 44"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                width="44"
+                                height="44"
+                                rx="6"
+                                fill="#F4FFF2"
+                              />
                               <path
                                 d="M20.833 12.6668H15.933C13.9728 12.6668 12.9927 12.6668 12.244 13.0482C11.5855 13.3838 11.05 13.9192 10.7145 14.5778C10.333 15.3265 10.333 16.3066 10.333 18.2668V28.0668C10.333 30.027 10.333 31.007 10.7145 31.7557C11.05 32.4143 11.5855 32.9497 12.244 33.2853C12.9927 33.6668 13.9728 33.6668 15.933 33.6668H25.733C27.6932 33.6668 28.6733 33.6668 29.422 33.2853C30.0805 32.9497 30.616 32.4143 30.9515 31.7557C31.333 31.007 31.333 30.027 31.333 28.0668V23.1668M17.333 26.6668H19.2866C19.8573 26.6668 20.1427 26.6668 20.4112 26.6023C20.6493 26.5451 20.8769 26.4509 21.0857 26.3229C21.3211 26.1786 21.5229 25.9769 21.9265 25.5733L33.083 14.4168C34.0495 13.4503 34.0495 11.8833 33.083 10.9168C32.1165 9.95027 30.5495 9.95027 29.583 10.9168L18.4264 22.0733C18.0229 22.4769 17.8211 22.6786 17.6768 22.9141C17.5489 23.1229 17.4546 23.3505 17.3974 23.5886C17.333 23.8571 17.333 24.1425 17.333 24.7132V26.6668Z"
-                                stroke="#5AA469" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                stroke="#5AA469"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
                             </svg>
                           </a>
 
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#confirmationModal">
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <rect width="44" height="44" rx="6" fill="#FFD9D7" />
+                          <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmationModal"
+                          >
+                            <svg
+                              width="44"
+                              height="44"
+                              viewBox="0 0 44 44"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                width="44"
+                                height="44"
+                                rx="6"
+                                fill="#FFD9D7"
+                              />
                               <path
                                 d="M26.6667 14.9999V14.0666C26.6667 12.7598 26.6667 12.1064 26.4123 11.6073C26.1886 11.1682 25.8317 10.8113 25.3926 10.5876C24.8935 10.3333 24.2401 10.3333 22.9333 10.3333H21.0667C19.7599 10.3333 19.1065 10.3333 18.6074 10.5876C18.1683 10.8113 17.8114 11.1682 17.5877 11.6073C17.3333 12.1064 17.3333 12.7598 17.3333 14.0666V14.9999M19.6667 21.4166V27.2499M24.3333 21.4166V27.2499M11.5 14.9999H32.5M30.1667 14.9999V28.0666C30.1667 30.0268 30.1667 31.0069 29.7852 31.7556C29.4496 32.4141 28.9142 32.9496 28.2556 33.2851C27.5069 33.6666 26.5268 33.6666 24.5667 33.6666H19.4333C17.4731 33.6666 16.4931 33.6666 15.7444 33.2851C15.0858 32.9496 14.5504 32.4141 14.2148 31.7556C13.8333 31.0069 13.8333 30.0268 13.8333 28.0666V14.9999"
-                                stroke="#CA0B00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                stroke="#CA0B00"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
                             </svg>
                           </a>
                         </div>
@@ -297,7 +342,11 @@ const Category = () => {
                       </td>
                       <td>
                         <div id="action_btn">
-                          <a href="#" className="subnewcategory-open">
+                          <a
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#updateCategory"
+                          >
                             <svg
                               width="44"
                               height="44"
@@ -369,7 +418,7 @@ const Category = () => {
                           <a
                             href="#"
                             data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                            data-bs-target="#updateCategory"
                           >
                             <svg
                               width="44"
@@ -441,7 +490,7 @@ const Category = () => {
                           <a
                             href="#"
                             data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                            data-bs-target="#updateCategory"
                           >
                             <svg
                               width="44"
@@ -555,188 +604,171 @@ const Category = () => {
         {/* <!-- Table Action Button Modal Start --> */}
 
         {/* <!-- Action Button Edit Modal Start --> */}
-        <section
-          className="modal fade"
-          id="exampleModal"
-          tabIndex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="heading-wrap">
-                <button
-                  type="button"
-                  className="close-btn close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <i className="fa-solid fa-xmark"></i>
-                </button>
-                <h2 className="heading">Edit</h2>
-              </div>
-              <form>
-                {/* <!-- Select Dropdowns with Add Buttons --> */}
-                <div className="row">
-                  <div className="form-row select-input-box col-lg-6">
-                    <label htmlFor="select-to">Select Brand *</label>
-                    <div className="select-box-dropdown">
-                      <div className="select-dropdown-selected">
-                        <span>Select Brand</span>
-                        <span className="icon">
-                          <i className="fas fa-angle-down"></i>
-                        </span>
-                      </div>
-                      <div className="select-dropdown-items">
-                        <input
-                          type="text"
-                          className="select-search-box"
-                          placeholder="Search..."
-                        />
-                        <option className="option">Select-1</option>
-                        <option className="option">Select-2</option>
-                        <option className="option">Select-2</option>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-row select-input-box col-lg-6">
-                    <label htmlFor="select-to">Select Category *</label>
-                    <div className="select-box-dropdown">
-                      <div className="select-dropdown-selected">
-                        <span>Select Category</span>
-                        <span className="icon">
-                          <i className="fas fa-angle-down"></i>
-                        </span>
-                        {/* <!-- Font Awesome angle-down icon --> */}
-                      </div>
-                      <div className="select-dropdown-items">
-                        <input
-                          type="text"
-                          className="select-search-box"
-                          placeholder="Search..."
-                        />
-                        <option className="option">Select-1</option>
-                        <option className="option">Select-2</option>
-                        <option className="option">Select-2</option>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div className="col-lg-6">
-                    <h3 className="heading2">Product Information</h3>
-                    <div className="mb-2">
-                      <div className="upload-profile">
-                        <div className="item">
-                          <div className="img-box"></div>
-
-                          <div className="profile-wrapper">
-                            <label className="custom-file-input-wrapper">
-                              <input
-                                type="file"
-                                className="custom-file-input"
-                                aria-label="Upload Photo"
-                              />
-                            </label>
-                            <p>PNG,JPEG or GIF (up to 1 MB)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="form-row">
-                      <label htmlFor="">Product Name *</label>
-                      <input type="text" placeholder="Product Name" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">Product Model *</label>
-                      <input type="text" placeholder="Product Model" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">EMEI No *</label>
-                      <input type="text" placeholder="EMEI No" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">Buying Price *</label>
-                      <input type="text" placeholder="Buying Price" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="vanilla-datepicker">Buying Date *</label>
-                      <div className="input-datepicker-wrapper">
-                        <input
-                          type="text"
-                          className="datepicker-input"
-                          placeholder="dd/mm/yyyy"
-                        />
-                        <i className="fas fa-calendar-alt icon"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <h3 className="heading2">Buyer Information</h3>
-                    <div className="mb-2">
-                      <div className="upload-profile">
-                        <div className="item">
-                          <div className="img-box"></div>
-
-                          <div className="profile-wrapper">
-                            <label className="custom-file-input-wrapper">
-                              <input
-                                type="file"
-                                className="custom-file-input"
-                                aria-label="Upload Photo"
-                              />
-                            </label>
-                            <p>PNG,JPEG or GIF (up to 1 MB)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="form-row">
-                      <label htmlFor="">Name *</label>
-                      <input type="text" placeholder="Name" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">Mobile *</label>
-                      <input type="text" placeholder="Mobile" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">Email *</label>
-                      <input type="text" placeholder="Email" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">Address *</label>
-                      <input type="text" placeholder="Address" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">NID *</label>
-                      <input type="text" placeholder="NID" />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="vanilla-datepicker">Date of Birth *</label>
-                      <div className="input-datepicker-wrapper">
-                        <input
-                          type="text"
-                          className="datepicker-input"
-                          placeholder="dd/mm/yyyy"
-                        />
-                        <i className="fas fa-calendar-alt icon"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="actions">
-                    <button type="submit" className="btn-save">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </form>
+        {/* <!-- <section className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="heading-wrap">
+              <button type="button" className="close-btn close" data-bs-dismiss="modal" aria-label="Close">
+                <i className="fa-solid fa-xmark"></i>
+              </button>
+              <h2 className="heading">Edit</h2>
             </div>
-          </div>
-        </section>
+            <form>
+              <div className="row">
+                <div className="form-row select-input-box col-lg-6">
+                  <label htmlFor="select-to">Select Brand *</label>
+                  <div className="select-box-dropdown">
+                    <div className="select-dropdown-selected">
+                      <span>Select Brand</span>
+                      <span className="icon"><i className="fas fa-angle-down"></i></span>
+                    </div>
+                    <div className="select-dropdown-items">
+                      <input type="text" className="select-search-box" placeholder="Search..." />
+                      <option className="option">Select-1</option>
+                      <option className="option">Select-2</option>
+                      <option className="option">Select-2</option>
+                    </div>
+                  </div>
+                </div>
+                <div className="form-row select-input-box col-lg-6">
+                  <label htmlFor="select-to">Select Category *</label>
+                  <div className="select-box-dropdown">
+                    <div className="select-dropdown-selected">
+                      <span>Select Category</span>
+                      <span className="icon"><i className="fas fa-angle-down"></i></span>
+                    </div>
+                    <div className="select-dropdown-items">
+                      <input type="text" className="select-search-box" placeholder="Search..." />
+                      <option className="option">Select-1</option>
+                      <option className="option">Select-2</option>
+                      <option className="option">Select-2</option>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div className="row">
+                <div className="col-lg-6">
+                  <h3 className="heading2">Product Information</h3>
+                  <div className="mb-2">
+                    <div className="upload-profile">
+                      <div className="item">
+                        <div className="img-box">
+                          <svg width="32" height="32" viewBox="0 0 50 50" fill="red" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="50" height="50" fill="url(#pattern0_1204_6)" fill-opacity="0.5" />
+                            <defs>
+                              <pattern id="pattern0_1204_6" patternContentUnits="objectBoundingBox" width="1"
+                                height="1">
+                                <use xlink:href="#image0_1204_6" transform="scale(0.005)" />
+                              </pattern>
+                              <image id="image0_1204_6" width="200" height="200"
+                                xlink:href="data:image/png;base64,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" />
+                            </defs>
+                          </svg>
+                        </div>
+
+                        <div className="profile-wrapper">
+                          <label className="custom-file-input-wrapper">
+                            <input type="file" className="custom-file-input" aria-label="Upload Photo" />
+                          </label>
+                          <p>PNG,JPEG or GIF (up to 1 MB)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <label htmlFor="">Product Name *</label>
+                    <input type="text" placeholder="Product Name" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">Product Model *</label>
+                    <input type="text" placeholder="Product Model" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">EMEI No *</label>
+                    <input type="text" placeholder="EMEI No" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">Buying Price *</label>
+                    <input type="text" placeholder="Buying Price" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="vanilla-datepicker">Buying Date *</label>
+                    <div className="input-datepicker-wrapper">
+                      <input type="text" className="datepicker-input" placeholder="dd/mm/yyyy" />
+                      <i className="fas fa-calendar-alt icon"></i>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <h3 className="heading2">Buyer Information</h3>
+                  <div className="mb-2">
+                    <div className="upload-profile">
+                      <div className="item">
+                        <div className="img-box">
+                          <svg width="32" height="32" viewBox="0 0 50 50" fill="red" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="50" height="50" fill="url(#pattern0_1204_6)" fill-opacity="0.5" />
+                            <defs>
+                              <pattern id="pattern0_1204_6" patternContentUnits="objectBoundingBox" width="1"
+                                height="1">
+                                <use xlink:href="#image0_1204_6" transform="scale(0.005)" />
+                              </pattern>
+                              <image id="image0_1204_6" width="200" height="200"
+                                xlink:href="data:image/png;base64,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" />
+                            </defs>
+                          </svg>
+                        </div>
+
+                        <div className="profile-wrapper">
+                          <label className="custom-file-input-wrapper">
+                            <input type="file" className="custom-file-input" aria-label="Upload Photo" />
+                          </label>
+                          <p>PNG,JPEG or GIF (up to 1 MB)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <label htmlFor="">Name *</label>
+                    <input type="text" placeholder="Name" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">Mobile *</label>
+                    <input type="text" placeholder="Mobile" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">Email *</label>
+                    <input type="text" placeholder="Email" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">Address *</label>
+                    <input type="text" placeholder="Address" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="">NID *</label>
+                    <input type="text" placeholder="NID" />
+                  </div>
+                  <div className="form-row">
+                    <label htmlFor="vanilla-datepicker">Date of Birth *</label>
+                    <div className="input-datepicker-wrapper">
+                      <input type="text" className="datepicker-input" placeholder="dd/mm/yyyy" />
+                      <i className="fas fa-calendar-alt icon"></i>
+                    </div>
+                  </div>
+                </div>
+                <div className="actions">
+                  <button type="submit" className="btn-save">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section> --> */}
         {/* <!-- Action Button Edit Modal Start --> */}
 
         {/* <!-- Confirmation Modal Start --> */}
@@ -785,12 +817,12 @@ const Category = () => {
         {/* <!-- Confirmation Modal End --> */}
         {/* <!-- Table Action Button Modal End --> */}
 
-        {/* <!-- ADD Product Modal Start --> */}
-        <section
+        {/* <!-- ADD Category Modal Start --> */}
+        <div
           className="modal fade"
-          id="addProduct"
+          id="addCategory"
           tabIndex="-1"
-          aria-labelledby="addProductLabel"
+          aria-labelledby="addCategoryLabel"
           aria-hidden="true"
         >
           <div className="modal-dialog">
@@ -804,143 +836,19 @@ const Category = () => {
                 >
                   <i className="fa-solid fa-xmark"></i>
                 </button>
-                <h2 className="heading">ADD NEW PRODUCT/SERVICES</h2>
+                <h2 className="heading">ADD NEW CATEGORY</h2>
               </div>
+
               <form>
                 <div className="row">
-                  <div className="form-row select-input-box col-12">
-                    <label htmlFor="select-to">COMPANY NAME</label>
-                    <div className="select-box-dropdown">
-                      <div className="select-dropdown-selected">
-                        <span>Select company</span>
-                        <span className="icon">
-                          <i className="fas fa-angle-down"></i>
-                        </span>
-                      </div>
-                      <div className="select-dropdown-items">
-                        <input
-                          type="text"
-                          className="select-search-box"
-                          placeholder="Search here..."
-                        />
-                        <option className="option">Company A</option>
-                        <option className="option">Company B</option>
-                        <option className="option">Company C</option>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="form-group row">
-                  <div className="form-row select-input-box col-8">
-                    <label htmlFor="select-to">CATEGORY NAME</label>
-                    <div className="select-box-dropdown">
-                      <div className="select-dropdown-selected">
-                        <span>Select category</span>
-                        <span className="icon">
-                          <i className="fas fa-angle-down"></i>
-                        </span>
-                      </div>
-                      <div className="select-dropdown-items">
-                        <input
-                          type="text"
-                          className="select-search-box"
-                          placeholder="Search here..."
-                        />
-                        <option className="option">Category 1</option>
-                        <option className="option">Category 2</option>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-row col-4">
-                    <button
-                      type="button"
-                      className="category-btn newcategory-open"
-                    >
-                      <svg
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16 10.6667V21.3333M10.6667 16H21.3333M10.4 28H21.6C23.8402 28 24.9603 28 25.816 27.564C26.5686 27.1805 27.1805 26.5686 27.564 25.816C28 24.9603 28 23.8402 28 21.6V10.4C28 8.15979 28 7.03969 27.564 6.18404C27.1805 5.43139 26.5686 4.81947 25.816 4.43597C24.9603 4 23.8402 4 21.6 4H10.4C8.15979 4 7.03969 4 6.18404 4.43597C5.43139 4.81947 4.81947 5.43139 4.43597 6.18404C4 7.03969 4 8.15979 4 10.4V21.6C4 23.8402 4 24.9603 4.43597 25.816C4.81947 26.5686 5.43139 27.1805 6.18404 27.564C7.03969 28 8.15979 28 10.4 28Z"
-                          stroke="white"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      ADD CATEGORY
-                    </button>
-                  </div>
-                </div>
-
-                <div className="form-group row">
-                  <div className="form-row select-input-box col-8">
-                    <label htmlFor="select-to">SUB-CATEGORY NAME</label>
-                    <div className="select-box-dropdown">
-                      <div className="select-dropdown-selected">
-                        <span>Select sub-category</span>
-                        <span className="icon">
-                          <i className="fas fa-angle-down"></i>
-                        </span>
-                      </div>
-                      <div className="select-dropdown-items">
-                        <input
-                          type="text"
-                          className="select-search-box"
-                          placeholder="Search here..."
-                        />
-                        <option className="option">Sub-category 1</option>
-                        <option className="option">Sub-category 2</option>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-row col-4">
-                    <button
-                      type="button"
-                      className="category-btn subnewcategory-open"
-                    >
-                      <svg
-                        width="32"
-                        height="32"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16 10.6667V21.3333M10.6667 16H21.3333M10.4 28H21.6C23.8402 28 24.9603 28 25.816 27.564C26.5686 27.1805 27.1805 26.5686 27.564 25.816C28 24.9603 28 23.8402 28 21.6V10.4C28 8.15979 28 7.03969 27.564 6.18404C27.1805 5.43139 26.5686 4.81947 25.816 4.43597C24.9603 4 23.8402 4 21.6 4H10.4C8.15979 4 7.03969 4 6.18404 4.43597C5.43139 4.81947 4.81947 5.43139 4.43597 6.18404C4 7.03969 4 8.15979 4 10.4V21.6C4 23.8402 4 24.9603 4.43597 25.816C4.81947 26.5686 5.43139 27.1805 6.18404 27.564C7.03969 28 8.15979 28 10.4 28Z"
-                          stroke="white"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      ADD SUB-CATEGORY
-                    </button>
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div className="col-lg-6">
+                  <div className="col-lg-12">
                     <div className="form-row">
-                      <label htmlFor="">PRODUCT CODE</label>
+                      <label htmlFor="">BRAND NAME</label>
                       <input type="text" placeholder="Type here.." required />
                     </div>
-                    <div className="form-row">
-                      <label htmlFor="">PRODUCT PRICE</label>
-                      <input type="text" placeholder="Type here.." required />
-                    </div>
-                    <div className="form-row">
-                      <label htmlFor="">PRODUCT NAME</label>
-                      <input type="text" placeholder="Type here.." required />
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
+
                     <div className="form-row select-input-box">
-                      <label htmlFor="select-to">PRODUCT STATUS</label>
+                      <label htmlFor="select-to">BRAND STATUS</label>
                       <div className="select-box-dropdown">
                         <div className="select-dropdown-selected">
                           <span>Select status</span>
@@ -959,161 +867,119 @@ const Category = () => {
                         </div>
                       </div>
                     </div>
+
                     <div className="form-row">
-                      <label htmlFor="">DESCRIPTION</label>
-                      <textarea
-                        name="text"
-                        id="text"
-                        placeholder="Type here.."
-                        required
-                      ></textarea>
+                      <label htmlFor="photo">BRAND PHOTO</label>
+                      <div className="upload-profile">
+                        <div className="item">
+                          <div className="img-box"></div>
+
+                          <div className="profile-wrapper">
+                            <label className="custom-file-input-wrapper m-0">
+                              <input
+                                type="file"
+                                className="custom-file-input"
+                                aria-label="Upload Photo"
+                              />
+                            </label>
+                            <p>PNG,JPEG or GIF (Upto 1 MB)</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="actions">
                     <button type="submit" className="btn-save">
-                      Submit
+                      SUBMIT
                     </button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
-        </section>
-        {/* <!--  ADD Product Modal End --> */}
+        </div>
+        {/* <!-- UPDATE Category Modal Start --> */}
+        <div
+          className="modal fade"
+          id="updateCategory"
+          tabIndex="-1"
+          aria-labelledby="updateCategoryLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="heading-wrap">
+                <button
+                  type="button"
+                  className="close-btn close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+                <h2 className="heading">UPDATE CATEGORY</h2>
+              </div>
 
-        {/* <!-- ADD Category Modal Start --> */}
-        <div className="newcategory">
-          <div className="newcategory-content">
-            <h2>ADD CATEGORY</h2>
-            <button type="button" className="newcategory-close">
-              <i className="fa-solid fa-xmark"></i>
-            </button>
-            <form>
-              <div className="form-group row">
-                <div className="form-row col-12">
-                  <label htmlFor="select-to">CATEGORY NAME</label>
-                  <input type="text" placeholder="Type here.." />
-                </div>
-                <div className="form-row select-input-box col-12">
-                  <label htmlFor="select-to">
-                    <strong>STATUS</strong>
-                  </label>
-                  <div className="select-box-dropdown">
-                    <div className="select-dropdown-selected">
-                      <span>Select status</span>
-                      <span className="icon">
-                        <i className="fas fa-angle-down"></i>
-                      </span>
+              <form>
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="form-row">
+                      <label htmlFor="">BRAND NAME</label>
+                      <input type="text" placeholder="Type here.." required />
                     </div>
-                    <div className="select-dropdown-items">
-                      <input
-                        type="text"
-                        className="select-search-box"
-                        placeholder="Search here..."
-                      />
-                      <option className="option">Active</option>
-                      <option className="option">Inactive</option>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="form-row">
-                  <label htmlFor="photo">CATEGORY PHOTO</label>
-                  <div className="upload-profile">
-                    <div className="item">
-                      <div className="img-box"></div>
-
-                      <div className="profile-wrapper">
-                        <label className="custom-file-input-wrapper m-0">
+                    <div className="form-row select-input-box">
+                      <label htmlFor="select-to">BRAND STATUS</label>
+                      <div className="select-box-dropdown">
+                        <div className="select-dropdown-selected">
+                          <span>Select status</span>
+                          <span className="icon">
+                            <i className="fas fa-angle-down"></i>
+                          </span>
+                        </div>
+                        <div className="select-dropdown-items">
                           <input
-                            type="file"
-                            className="custom-file-input"
-                            aria-label="Upload Photo"
+                            type="text"
+                            className="select-search-box"
+                            placeholder="Search here..."
                           />
-                        </label>
-                        <p>PNG,JPEG or GIF (Upto 1 MB)</p>
+                          <option className="option">Active</option>
+                          <option className="option">Inactive</option>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="form-row">
+                      <label htmlFor="photo">BRAND PHOTO</label>
+                      <div className="upload-profile">
+                        <div className="item">
+                          <div className="img-box"></div>
+
+                          <div className="profile-wrapper">
+                            <label className="custom-file-input-wrapper m-0">
+                              <input
+                                type="file"
+                                className="custom-file-input"
+                                aria-label="Upload Photo"
+                              />
+                            </label>
+                            <p>PNG,JPEG or GIF (Upto 1 MB)</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="button-group">
-                {/* <!-- <button type="button" className="cancel-btn newcategory-close">
-                  Cancel
-                </button> --> */}
-                <button className="submit-btn">SUBMIT</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        {/* <!-- Add Product modal to ADD Category Modal End --> */}
-
-        {/* <!-- Add Product modal to ADD Sub Category Modal Start --> */}
-        <div className="subnewcategory">
-          <div className="subnewcategory-content">
-            <h2>ADD SUB CATEGORY</h2>
-            <button type="button" className="subnewcategory-close">
-              <i className="fa-solid fa-xmark"></i>
-            </button>
-            <form>
-              <div className="form-group row">
-                <div className="form-row col-12">
-                  <label htmlFor="select-to">CATEGORY NAME</label>
-                  <input type="text" placeholder="Type here.." />
-                </div>
-                <div className="form-row select-input-box col-12">
-                  <label htmlFor="select-to">
-                    <strong>STATUS</strong>
-                  </label>
-                  <div className="select-box-dropdown">
-                    <div className="select-dropdown-selected">
-                      <span>Select status</span>
-                      <span className="icon">
-                        <i className="fas fa-angle-down"></i>
-                      </span>
-                    </div>
-                    <div className="select-dropdown-items">
-                      <input
-                        type="text"
-                        className="select-search-box"
-                        placeholder="Search here..."
-                      />
-                      <option className="option">Active</option>
-                      <option className="option">Inactive</option>
-                    </div>
+                  <div className="actions">
+                    <button type="submit" className="btn-save">
+                      SUBMIT
+                    </button>
                   </div>
                 </div>
-
-                <div className="form-row">
-                  <label htmlFor="photo">CATEGORY PHOTO</label>
-                  <div className="upload-profile">
-                    <div className="item">
-                      <div className="img-box"></div>
-
-                      <div className="profile-wrapper">
-                        <label className="custom-file-input-wrapper m-0">
-                          <input
-                            type="file"
-                            className="custom-file-input"
-                            aria-label="Upload Photo"
-                          />
-                        </label>
-                        <p>PNG,JPEG or GIF (Upto 1 MB)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="button-group">
-                {/* <!-- <button type="button" className="cancel-btn newcategory-close">
-                  Cancel
-                </button> --> */}
-                <button className="submit-btn">SUBMIT</button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-        {/* <!-- Add Product modal to ADD Sub Category Modal End --> */}
+        {/* <!-- UPDATE Category Modal Start --> */}
       </div>
     </div>
   );

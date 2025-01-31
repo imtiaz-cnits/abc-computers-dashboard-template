@@ -7,7 +7,6 @@ import { jsPDF } from "jspdf";
 
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
-    require("@/assets/js/bootstrap.bundle.min.js");
 
     const script = document.createElement("script");
     script.src = "https://code.jquery.com/jquery-3.6.4.min.js";

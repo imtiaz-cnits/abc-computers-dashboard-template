@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import DashboardActiveLink from "../DashboardActiveLink/DashboardActiveLink";
 import DashboardSubmenuActiveLink from "../DashboardSubmenuActiveLink/DashboardSubmenuActiveLink";
@@ -315,6 +317,46 @@ const DashboardSidebar = () => {
                     </DashboardSubmenuActiveLink>
                   </ul>
                 </li>
+                
+                {/* <li className="submenu-active">
+                  <a>
+                    <svg
+                      width="44"
+                      height="44"
+                      viewBox="0 0 44 44"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="44" height="44" rx="6" fill="#F4FFF2" />
+                      <path
+                        d="M16.7497 20.8333H13.3663C12.7129 20.8333 12.3862 20.8333 12.1367 20.9605C11.9172 21.0723 11.7387 21.2508 11.6268 21.4703C11.4997 21.7199 11.4997 22.0466 11.4997 22.7V32.5M27.2497 20.8333H30.633C31.2864 20.8333 31.6131 20.8333 31.8627 20.9605C32.0822 21.0723 32.2607 21.2508 32.3725 21.4703C32.4997 21.7199 32.4997 22.0466 32.4997 22.7V32.5M27.2497 32.5V15.2333C27.2497 13.9265 27.2497 13.2731 26.9954 12.774C26.7717 12.335 26.4147 11.978 25.9757 11.7543C25.4765 11.5 24.8231 11.5 23.5163 11.5H20.483C19.1762 11.5 18.5228 11.5 18.0237 11.7543C17.5847 11.978 17.2277 12.335 17.004 12.774C16.7497 13.2731 16.7497 13.9265 16.7497 15.2333V32.5M33.6663 32.5H10.333M20.833 16.1667H23.1663M20.833 20.8333H23.1663M20.833 25.5H23.1663"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    <span className="text">PRODUCTS</span>
+                    <FaAngleDown className="arrow-icon" />
+                  </a>
+                  <ul className="sub-menu">
+                    <DashboardSubmenuActiveLink href={"/dashboard/brands"}>
+                      BRANDS
+                    </DashboardSubmenuActiveLink>
+                    <DashboardSubmenuActiveLink href={"/dashboard/add-product"}>
+                      ADD PRODUCT
+                    </DashboardSubmenuActiveLink>
+                    <DashboardSubmenuActiveLink href={"/dashboard/category"}>
+                      CATEGORY
+                    </DashboardSubmenuActiveLink>
+                    <DashboardSubmenuActiveLink
+                      href={"/dashboard/sub-category"}
+                    >
+                      SUB CATEGORY
+                    </DashboardSubmenuActiveLink>
+                  </ul>
+                </li> */}
 
                 <DashboardActiveLink href={"/dashboard/incomes"}>
                   <svg

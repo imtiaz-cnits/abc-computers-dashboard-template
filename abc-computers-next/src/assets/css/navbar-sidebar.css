@@ -553,6 +553,7 @@ body[data-sidebar-size="sm"] #page-topbar {
   padding: 8px 8px;
   border-radius: 8px;
   transition: all 0.3s;
+  z-index: 99999999999999999999;
 }
 
 .vertical-menu .menu ul li a:nth-last-child(1) {
@@ -595,10 +596,17 @@ body[data-sidebar-size="sm"] #page-topbar {
   margin-right: 12px !important;
   border-radius: 8px;
   z-index: 9;
+  opacity: 0;
+  transition: all 0.3s ease;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.vertical-menu .sub-menu.active {
+  display: block;
+  opacity: 1;
 }
 
 .vertical-menu .menu .sub-menu li:nth-last-of-type(1) {

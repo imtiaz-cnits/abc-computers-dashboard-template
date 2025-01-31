@@ -8,8 +8,8 @@ const DashboardSubmenuActiveLink = ({ children, href }) => {
   const active = pathname === href;
 
   return (
-    <li>
-      <Link href={href} className={`${active && "active"}`}>
+    <li  className={`${active ? "active" : ""}`}>
+      <Link href={href}>
         <span className="text">{children}</span>
       </Link>
     </li>

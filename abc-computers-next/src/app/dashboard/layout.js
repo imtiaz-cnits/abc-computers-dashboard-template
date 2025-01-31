@@ -11,11 +11,9 @@ export const metadata = {
 
 const layout = ({ children }) => {
   return (
-    <html lang="en">
-      <body>
-        <DashboardLayout>{children}</DashboardLayout>
-      </body>
-    </html>
+    <>
+      <DashboardLayout>{children}</DashboardLayout>
+    </>
   );
 };
 

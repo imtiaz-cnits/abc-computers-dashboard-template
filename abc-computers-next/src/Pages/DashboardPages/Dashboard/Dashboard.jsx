@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import cardImg1 from "@/assets/icons/card-projects.svg"
 import cardImg2 from "@/assets/icons/card-employe.svg"

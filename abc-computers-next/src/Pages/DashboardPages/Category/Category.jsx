@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import generatePDF from "../../../../public/js/generate-pdf";
 import generateXLSX from "../../../../public/js/generate-xlsx";
 import generatePrint from "../../../../public/js/generate-print";
+import generateCSV from "../../../../public/js/generate-csv";
+import copyTableToClipboard from "../../../../public/js/copyToClipboard";
 
 const Category = () => {
   const tableRef = useRef(null);
@@ -105,7 +107,10 @@ const Category = () => {
 
             <div className="button-item">
               <div className="icon-buttons">
-                <button id="copyBtn">
+                <button
+                  id="copyBtn"
+                  onClick={() => copyTableToClipboard(tableRef?.current)}
+                >
                   <svg
                     width="28"
                     height="28"
@@ -119,7 +124,10 @@ const Category = () => {
                     />
                   </svg>
                 </button>
-                <button id="csvBtn">
+                <button
+                  id="csvBtn"
+                  onClick={() => generateCSV(tableRef.current)}
+                >
                   <svg
                     width="23"
                     height="28"

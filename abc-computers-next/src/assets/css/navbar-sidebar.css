@@ -840,7 +840,12 @@ body[data-sidebar-size="sm"] .menu>ul>li>a:hover .text {
   z-index: 99;
 }
 
+body[data-sidebar-size="sm"] .menu .submenu-active.active {
+  max-height: 50px;
+}
+
 body[data-sidebar-size="sm"] .menu .sub-menu {
+  visibility: visible;
   position: absolute;
   top: 0;
   left: 60px;
@@ -1149,6 +1154,8 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul {
 
 body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul .sub-menu {
   overflow: visible;
+  z-index: 99999999;
+  opacity: 1;
 }
 
 body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul .sub-menu li:hover ul {

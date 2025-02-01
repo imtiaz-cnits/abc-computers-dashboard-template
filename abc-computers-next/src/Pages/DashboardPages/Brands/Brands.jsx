@@ -1,7 +1,11 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import generatePDF from "../../../../public/js/generate-pdf";
+import generateXLSX from "../../../../public/js/generate-xlsx";
 
 const Brands = () => {
+  const tableRef = useRef(null);
+
   return (
     <div className="main-content">
       <div className="page-content">
@@ -105,7 +109,10 @@ const Brands = () => {
                     />
                   </svg>
                 </button>
-                <button id="pdfBtn">
+                <button
+                  id="pdfBtn"
+                  onClick={() => generatePDF(tableRef?.current)}
+                >
                   <svg
                     width="23"
                     height="28"
@@ -169,7 +176,10 @@ const Brands = () => {
                     />
                   </svg>
                 </button>
-                <button id="xlsxBtn">
+                <button
+                  id="xlsxBtn"
+                  onClick={() => generateXLSX(tableRef.current)}
+                >
                   <svg
                     width="22"
                     height="28"
@@ -207,7 +217,11 @@ const Brands = () => {
             <div className="card-body">
               {/* <!-- Table --> */}
               <div className="table-wrapper">
-                <table id="printTable" className="table table-hover">
+                <table
+                  ref={tableRef}
+                  id="printTable"
+                  className="table table-hover"
+                >
                   <thead>
                     <tr>
                       <th>SL NO</th>

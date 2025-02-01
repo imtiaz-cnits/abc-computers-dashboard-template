@@ -11,7 +11,6 @@ const handleSubmenuToggle = (item) => {
         return
     }
 
-
     const activeSubmenu = document.querySelector('.vertical-menu .submenu-active.active')
 
     if (activeSubmenu) {

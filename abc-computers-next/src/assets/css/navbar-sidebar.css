@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* ====================
   Reset Default CSS Start
@@ -68,7 +68,6 @@ input {
 
 label {
   font-family: var(--primary-font);
-
 }
 
 th {
@@ -130,7 +129,7 @@ body[data-sidebar-size="sm"] .main-content {
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .isvertical-topbar .vertical-menu-btn {
@@ -589,14 +588,12 @@ body[data-sidebar-size="sm"] #page-topbar {
 }
 
 .vertical-menu .menu .sub-menu {
-  visibility: hidden;
   margin-left: 52px !important;
   padding: 5px 0 !important;
   background: var(--gray);
   margin-right: 12px !important;
   border-radius: 8px;
-  z-index: 9;
-  max-height: 0;
+  z-index: 99999;
   overflow: hidden;
   transition: all 0.3s ease;
   -webkit-border-radius: 8px;
@@ -605,10 +602,9 @@ body[data-sidebar-size="sm"] #page-topbar {
   -o-border-radius: 8px;
 }
 
-.vertical-menu .submenu-active.active .sub-menu {
+/* .vertical-menu .submenu-active.active .sub-menu {
   visibility: visible;
-  max-height: 500px;
-}
+} */
 
 .vertical-menu .menu .sub-menu li:nth-last-of-type(1) {
   margin-bottom: 0px !important;
@@ -640,8 +636,8 @@ body[data-sidebar-size="sm"] #page-topbar {
   background: var(--hover-color);
 } */
 
-.vertical-menu .menu ul li>a:hover,
-.vertical-menu .menu ul li.active>a {
+.vertical-menu .menu ul li > a:hover,
+.vertical-menu .menu ul li.active > a {
   background: var(--hover-color);
   color: var(--text-color);
 }
@@ -654,19 +650,19 @@ body[data-sidebar-size="sm"] #page-topbar {
 .vertical-menu .submenu-active {
   max-height: 50px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .vertical-menu .submenu-active.active {
   max-height: 1000px;
 }
 
-.vertical-menu .menu ul li.active>a svg rect,
+.vertical-menu .menu ul li.active > a svg rect,
 .vertical-menu .submenu-active.active svg rect {
   fill: var(--primary-color) !important;
 }
 
-.vertical-menu .menu ul li.active>a svg path,
+.vertical-menu .menu ul li.active > a svg path,
 .vertical-menu .submenu-active.active svg path {
   stroke: var(--white) !important;
 }
@@ -793,7 +789,7 @@ body[data-sidebar-size="sm"] #sidebar-menu ul .text {
   display: none;
 }
 
-body[data-sidebar-size="sm"] .menu>ul>li>a {
+body[data-sidebar-size="sm"] .menu > ul > li > a {
   position: relative;
   display: flex;
   align-items: center;
@@ -801,7 +797,7 @@ body[data-sidebar-size="sm"] .menu>ul>li>a {
   z-index: 99;
 }
 
-body[data-sidebar-size="sm"] .menu>ul>li>a .text {
+body[data-sidebar-size="sm"] .menu > ul > li > a .text {
   position: absolute;
   left: 55px !important;
   top: 50%;
@@ -820,7 +816,7 @@ body[data-sidebar-size="sm"] .menu>ul>li>a .text {
   z-index: 99;
 }
 
-body[data-sidebar-size="sm"] .menu>ul>li>a .text::after {
+body[data-sidebar-size="sm"] .menu > ul > li > a .text::after {
   content: "";
   position: absolute;
   left: -5px;
@@ -833,7 +829,7 @@ body[data-sidebar-size="sm"] .menu>ul>li>a .text::after {
   z-index: 99;
 }
 
-body[data-sidebar-size="sm"] .menu>ul>li>a:hover .text {
+body[data-sidebar-size="sm"] .menu > ul > li > a:hover .text {
   left: 50px;
   opacity: 1;
   visibility: visible;
@@ -915,7 +911,10 @@ body[data-sidebar-size="sm"] .menu ul li.active ul li a {
     display: inline-block;
   }
 
-  [data-layout-mode="dark"] .isvertical-topbar .navbar-header .navbar-brand-box {
+  [data-layout-mode="dark"]
+    .isvertical-topbar
+    .navbar-header
+    .navbar-brand-box {
     background-color: var(--dark-mode-bg);
   }
 
@@ -1005,6 +1004,7 @@ body[data-sidebar-size="sm"] .menu ul li.active ul li a {
 .vertical-menu .vertical-menu-btn {
   font-size: 20px !important;
   position: absolute;
+  top: 10px;
   right: -27px;
   z-index: 2;
   transition: 0.4s;
@@ -1031,7 +1031,7 @@ body[data-sidebar-size="sm"] .menu ul li.active ul li a {
   height: auto;
 }
 
-#sidebar-menu .has-arrow+ul .has-arrow:after {
+#sidebar-menu .has-arrow + ul .has-arrow:after {
   right: 18px;
   top: 0px;
 }
@@ -1080,12 +1080,12 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu .nav.collapse {
   height: inherit !important;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li > a {
   padding: 15px;
   margin: 0px 8px 4px 8px;
   -webkit-transition: none;
@@ -1093,7 +1093,7 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a {
   display: block;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a i {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li > a i {
   font-size: 1.3rem;
   text-align: center;
   min-width: 50px;
@@ -1101,27 +1101,38 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a i {
   margin-left: -6px;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a span {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li > a span {
   opacity: 0;
   padding-left: 25px;
   pointer-events: none;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a.has-arrow:after {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li
+  > a.has-arrow:after {
   display: none;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li>a .nav-icon {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li
+  > a
+  .nav-icon {
   top: -2px;
   width: 20px;
   height: 20px;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li a {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li a {
   border-radius: 8px !important;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>a {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li:hover > a {
   position: relative;
   width: calc(190px + 70px);
   color: var(--text-color);
@@ -1131,15 +1142,26 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>a {
   box-shadow: inset 0 3px 10px 0 rgba(154, 161, 171, 0.1);
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>a span {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li:hover
+  > a
+  span {
   opacity: 1;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover .has-arrow:after {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li:hover
+  .has-arrow:after {
   display: block;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul > li:hover > ul {
   display: block;
   top: 55px;
   border-radius: 4px;
@@ -1152,13 +1174,18 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul {
   border: 1px solid #eff0f2;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul .sub-menu {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul .submenu-active {
   overflow: visible;
-  z-index: 99999999;
   opacity: 1;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul .sub-menu li:hover ul {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  ul
+  .sub-menu
+  li:hover
+  ul {
   content: "\F0142";
   font-family: "Material Design Icons";
   display: block;
@@ -1169,13 +1196,25 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul .sub-menu li:hover 
   color: var(--text-color) !important;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul ul {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li:hover
+  > ul
+  ul {
   -webkit-box-shadow: 3px 5px 10px 0 rgba(54, 61, 71, 0.1);
   box-shadow: 3px 5px 10px 0 rgba(54, 61, 71, 0.1);
   border: 1px solid #eff0f2;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul a {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li:hover
+  > ul
+  a {
   -webkit-box-shadow: none;
   box-shadow: none;
   padding: 8px 18px;
@@ -1186,24 +1225,43 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul a {
   color: #645e7a;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul .sub-menu {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li:hover
+  > ul
+  .sub-menu {
   width: 194px;
   border-radius: 4px;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul>li:hover>ul .sub-menu a {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  > li:hover
+  > ul
+  .sub-menu
+  a {
   padding: 8px 18px;
   margin: 5px 9px 5px 6px !important;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul ul {
+body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu > ul ul {
   padding: 5px 0;
   z-index: 9999;
   display: none;
   background-color: var(--white);
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul ul li:hover>ul {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  > ul
+  ul
+  li:hover
+  > ul {
   display: block;
   left: 180px;
   bottom: -40px;
@@ -1213,11 +1271,23 @@ body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu>ul ul li:hover>ul {
   width: 180px;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul li ul.sub-menu:before {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  ul
+  li
+  ul.sub-menu:before {
   display: none;
 }
 
-body[data-sidebar-size="sm"] .vertical-menu #sidebar-menu ul li ul.sub-menu li a:before {
+body[data-sidebar-size="sm"]
+  .vertical-menu
+  #sidebar-menu
+  ul
+  li
+  ul.sub-menu
+  li
+  a:before {
   display: none;
 }
 

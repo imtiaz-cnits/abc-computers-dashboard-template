@@ -17,8 +17,6 @@ const DashboardSubmenu = ({ submenuItems, icon, submenuTitle }) => {
     setSubmenuActive(!!active);
   }, [currentPath]);
 
-  // TODO: make it floating on side bar collapse
-
   return (
     <li className={`submenu-active ${submenuActive ? "active" : ""}`}>
       <a className="submenu-toggle">

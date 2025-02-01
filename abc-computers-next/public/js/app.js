@@ -1,4 +1,4 @@
-import $ from "jquery";
+
 
 // Sign in And Sign up Start.......
 function switchCard() {

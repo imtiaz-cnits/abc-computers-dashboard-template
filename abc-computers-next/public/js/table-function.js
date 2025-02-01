@@ -26,63 +26,63 @@ searchInput.addEventListener("input", function () {
 
 // .............Table copy,csv,pdf,xlse,print all file Start...............//
 
-$(document).ready(function () {
-  // Copy table to clipboard
-  $("#copyBtn").click(function () {
-    const range = document.createRange();
-    range.selectNode(document.querySelector("table"));
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-    alert("Table copied to clipboard!");
-  });
+// $(document).ready(function () {
+//   // Copy table to clipboard
+//   $("#copyBtn").click(function () {
+//     const range = document.createRange();
+//     range.selectNode(document.querySelector("table"));
+//     window.getSelection().removeAllRanges();
+//     window.getSelection().addRange(range);
+//     document.execCommand("copy");
+//     window.getSelection().removeAllRanges();
+//     alert("Table copied to clipboard!");
+//   });
 
-  // Export table to CSV
-  $("#csvBtn").click(function () {
-    let csv = [];
-    const rows = document.querySelectorAll("table tr");
+//   // Export table to CSV
+//   $("#csvBtn").click(function () {
+//     let csv = [];
+//     const rows = document.querySelectorAll("table tr");
 
-    rows.forEach((row) => {
-      const cols = row.querySelectorAll("td, th");
-      let rowData = [];
-      cols.forEach((col) => rowData.push(col.innerText));
-      csv.push(rowData.join(","));
-    });
+//     rows.forEach((row) => {
+//       const cols = row.querySelectorAll("td, th");
+//       let rowData = [];
+//       cols.forEach((col) => rowData.push(col.innerText));
+//       csv.push(rowData.join(","));
+//     });
 
-    const csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
-    const downloadLink = document.createElement("a");
-    downloadLink.download = "data.csv";
-    downloadLink.href = window.URL.createObjectURL(csvFile);
-    downloadLink.click();
-  });
+//     const csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+//     const downloadLink = document.createElement("a");
+//     downloadLink.download = "data.csv";
+//     downloadLink.href = window.URL.createObjectURL(csvFile);
+//     downloadLink.click();
+//   });
 
-  // Export table to PDF
-  $("#pdfBtn").click(function () {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+//   // Export table to PDF
+//   $("#pdfBtn").click(function () {
+//     const { jsPDF } = window.jspdf;
+//     const doc = new jsPDF();
 
-    // Add the table content to the PDF
-    doc.autoTable({
-      html: "table",
-      startY: 10,
-    });
+//     // Add the table content to the PDF
+//     doc.autoTable({
+//       html: "table",
+//       startY: 10,
+//     });
 
-    // Save the PDF
-    doc.save("data.pdf");
-  });
+//     // Save the PDF
+//     doc.save("data.pdf");
+//   });
 
-  // Export table to XLSX
-  $("#xlsxBtn").click(function () {
-    const wb = XLSX.utils.table_to_book(document.querySelector("table"));
-    XLSX.writeFile(wb, "data.xlsx");
-  });
+//   // Export table to XLSX
+//   $("#xlsxBtn").click(function () {
+//     const wb = XLSX.utils.table_to_book(document.querySelector("table"));
+//     XLSX.writeFile(wb, "data.xlsx");
+//   });
 
-  // Print table
-  $("#printBtn").click(function () {
-    window.print();
-  });
-});
+//   // Print table
+//   $("#printBtn").click(function () {
+//     window.print();
+//   });
+// });
 // .............Table copy,csv,pdf,xlse,print all file End...............//
 
 // ...............Filter Dropdown functionality Start...................//

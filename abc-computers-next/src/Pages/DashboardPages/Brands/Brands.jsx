@@ -2,6 +2,8 @@
 import React, { useRef } from "react";
 import generatePDF from "../../../../public/js/generate-pdf";
 import generateXLSX from "../../../../public/js/generate-xlsx";
+import copyTableToClipboard from "../../../../public/js/copyToClipboard";
+import generatePrint from "../../../../public/js/generate-print";
 
 const Brands = () => {
   const tableRef = useRef(null);
@@ -65,7 +67,10 @@ const Brands = () => {
 
             <div className="button-item">
               <div className="icon-buttons">
-                <button id="copyBtn">
+                <button
+                  id="copyBtn"
+                  onClick={() => copyTableToClipboard(tableRef?.current)}
+                >
                   <svg
                     width="28"
                     height="28"
@@ -142,7 +147,10 @@ const Brands = () => {
                     />
                   </svg>
                 </button>
-                <button id="printBtn">
+                <button
+                  id="printBtn"
+                  onClick={() => generatePrint(tableRef)}
+                >
                   <svg
                     width="27"
                     height="28"

@@ -2,6 +2,8 @@
 
 import React, { useRef } from "react";
 import generatePDF from "../../../../public/js/generate-pdf";
+import generateXLSX from "../../../../public/js/generate-xlsx";
+import generatePrint from "../../../../public/js/generate-print";
 
 const Category = () => {
   const tableRef = useRef(null);
@@ -49,7 +51,7 @@ const Category = () => {
                   type="text"
                   id="searchInput"
                   className="form-control"
-                  placeholder="Search Category"
+                  placeholder="Search Category..."
                 />
                 {/* <!-- Entries per page --> */}
                 <div
@@ -180,7 +182,7 @@ const Category = () => {
                     />
                   </svg>
                 </button>
-                <button id="printBtn">
+                <button id="printBtn" onClick={() => generatePrint(tableRef)}>
                   <svg
                     width="27"
                     height="28"
@@ -214,7 +216,10 @@ const Category = () => {
                     />
                   </svg>
                 </button>
-                <button id="xlsxBtn">
+                <button
+                  id="xlsxBtn"
+                  onClick={() => generateXLSX(tableRef.current)}
+                >
                   <svg
                     width="22"
                     height="28"

@@ -1330,13 +1330,12 @@ body[data-layout-mode="bordered"] .vertical-menu {
 }
 
 [data-simplebar]::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
   background-color: transparent;
 }
 
 [data-simplebar]::-webkit-scrollbar-thumb {
   background-color: #77c5fd69 !important;
-  width: 5px !important;
 }
 
 .simplebar-offset {

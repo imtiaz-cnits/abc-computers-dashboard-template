@@ -6,18 +6,12 @@ import React, { useEffect } from "react";
 
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
-
     const script = document.createElement("script");
     script.src = "https://code.jquery.com/jquery-3.6.4.min.js";
     script.async = true;
     document.body.appendChild(script);
 
     script.onload = () => {
-
-      // Initialize Sidebar Active State on Page Load
-      document.addEventListener("DOMContentLoaded", function () {
-        setSidebarMenuActive();
-      });
 
       // Responsive Sidebar Toggle
       function toggleSidebar() {
@@ -38,16 +32,6 @@ const DashboardLayout = ({ children }) => {
       // .............Table copy,csv,pdf,xlse,print all file Start...............//
 
       $(document).ready(function () {
-        // Copy table to clipboard
-        $("#copyBtn").click(function () {
-          const range = document.createRange();
-          range.selectNode(document.querySelector("table"));
-          window.getSelection().removeAllRanges();
-          window.getSelection().addRange(range);
-          document.execCommand("copy");
-          window.getSelection().removeAllRanges();
-          alert("Table copied to clipboard!");
-        });
 
         // Export table to CSV
         $("#csvBtn").click(function () {
@@ -68,16 +52,6 @@ const DashboardLayout = ({ children }) => {
           downloadLink.click();
         });
 
-        // Export table to XLSX
-        // $("#xlsxBtn").click(function () {
-        //   const wb = XLSX.utils.table_to_book(document.querySelector("table"));
-        //   XLSX.writeFile(wb, "data.xlsx");
-        // });
-
-        // Print table
-        $("#printBtn").click(function () {
-          window.print();
-        });
       });
       // .............Table copy,csv,pdf,xlse,print all file End...............//
 
@@ -138,121 +112,6 @@ const DashboardLayout = ({ children }) => {
       });
 
       // Create Product modal to ADD sub Category Modal End................
-
-      // Filter Select Search Box Js Start................................................................
-      document.addEventListener("DOMContentLoaded", function () {
-        const dropdowns = document.querySelectorAll(".select-box-dropdown");
-
-        dropdowns.forEach(function (dropdown) {
-          const dropdownSelected = dropdown.querySelector(
-            ".select-dropdown-selected"
-          );
-          const dropdownItems = dropdown.querySelector(
-            ".select-dropdown-items"
-          );
-          const searchBox = dropdown.querySelector(".select-search-box");
-          const options = dropdownItems.querySelectorAll(".option");
-          const icon = dropdown.querySelector(".icon i");
-
-          function toggleSearchInput() {
-            if (options.length >= 4) {
-              searchBox.style.display = "block";
-            } else {
-              searchBox.style.display = "none";
-            }
-          }
-
-          function positionDropdown() {
-            const rect = dropdown.getBoundingClientRect();
-            const dropdownHeight = dropdownItems.offsetHeight;
-            const spaceBelow = window.innerHeight - rect.bottom;
-            const spaceAbove = rect.top;
-
-            if (spaceBelow < dropdownHeight && spaceAbove > dropdownHeight) {
-              dropdownItems.style.bottom = `${rect.height}px`;
-              dropdownItems.style.top = "auto";
-            } else {
-              dropdownItems.style.top = "100%";
-              dropdownItems.style.bottom = "auto";
-            }
-          }
-
-          dropdownSelected.addEventListener("click", function (e) {
-            e.stopPropagation();
-
-            // Close all other dropdowns
-            dropdowns.forEach(function (otherDropdown) {
-              if (otherDropdown !== dropdown) {
-                otherDropdown
-                  .querySelector(".select-dropdown-items")
-                  .classList.remove("show");
-                otherDropdown
-                  .querySelector(".icon i")
-                  .classList.remove("fa-angle-up");
-                otherDropdown
-                  .querySelector(".icon i")
-                  .classList.add("fa-angle-down");
-              }
-            });
-
-            // Toggle current dropdown
-            dropdownItems.classList.toggle("show");
-
-            // Toggle icon
-            icon.classList.toggle(
-              "fa-angle-up",
-              dropdownItems.classList.contains("show")
-            );
-            icon.classList.toggle(
-              "fa-angle-down",
-              !dropdownItems.classList.contains("show")
-            );
-
-            // Show/hide search box
-            toggleSearchInput();
-
-            // Position dropdown correctly
-            if (dropdownItems.classList.contains("show")) {
-              positionDropdown();
-            }
-          });
-
-          searchBox.addEventListener("input", function () {
-            const filter = searchBox.value.toLowerCase();
-            options.forEach(function (option) {
-              option.style.display = option.textContent
-                .toLowerCase()
-                .includes(filter)
-                ? "block"
-                : "none";
-            });
-          });
-
-          document.addEventListener("click", function (e) {
-            if (!dropdown.contains(e.target)) {
-              dropdownItems.classList.remove("show");
-              icon.classList.remove("fa-angle-up");
-              icon.classList.add("fa-angle-down");
-              searchBox.style.display = "none";
-            }
-          });
-
-          dropdownItems.addEventListener("click", function (e) {
-            if (e.target.classList.contains("option")) {
-              dropdownSelected.querySelector("span").textContent =
-                e.target.textContent;
-              dropdownItems.classList.remove("show");
-              icon.classList.remove("fa-angle-up");
-              icon.classList.add("fa-angle-down");
-              searchBox.style.display = "none";
-            }
-          });
-        });
-      });
-
-      // Filter Select Search Box Js End........................................................
-
-
     };
 
     return () => {

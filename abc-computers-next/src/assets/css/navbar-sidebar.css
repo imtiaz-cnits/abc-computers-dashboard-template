@@ -588,12 +588,13 @@ body[data-sidebar-size="sm"] #page-topbar {
 }
 
 .vertical-menu .menu .sub-menu {
+  display: block;
   margin-left: 52px !important;
   padding: 5px 0 !important;
   background: var(--gray);
   margin-right: 12px !important;
   border-radius: 8px;
-  z-index: 99999;
+  z-index: 999;
   overflow: hidden;
   transition: all 0.3s ease;
   -webkit-border-radius: 8px;
@@ -602,9 +603,9 @@ body[data-sidebar-size="sm"] #page-topbar {
   -o-border-radius: 8px;
 }
 
-/* .vertical-menu .submenu-active.active .sub-menu {
-  visibility: visible;
-} */
+.vertical-menu .submenu-active.active .sub-menu {
+  display: block;
+}
 
 .vertical-menu .menu .sub-menu li:nth-last-of-type(1) {
   margin-bottom: 0px !important;
@@ -650,7 +651,7 @@ body[data-sidebar-size="sm"] #page-topbar {
 .vertical-menu .submenu-active {
   max-height: 50px;
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .vertical-menu .submenu-active.active {
@@ -794,7 +795,7 @@ body[data-sidebar-size="sm"] .menu > ul > li > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99;
+  z-index: 99999999999999;
 }
 
 body[data-sidebar-size="sm"] .menu > ul > li > a .text {
@@ -813,7 +814,7 @@ body[data-sidebar-size="sm"] .menu > ul > li > a .text {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
-  z-index: 99;
+  z-index: 9999999;
 }
 
 body[data-sidebar-size="sm"] .menu > ul > li > a .text::after {
@@ -841,7 +842,7 @@ body[data-sidebar-size="sm"] .menu .submenu-active.active {
 }
 
 body[data-sidebar-size="sm"] .menu .sub-menu {
-  visibility: visible;
+  display: none;
   position: absolute;
   top: 0;
   left: 60px;
@@ -1324,7 +1325,18 @@ body[data-layout-mode="bordered"] .vertical-menu {
   align-content: flex-start;
   align-items: flex-start;
   padding-top: 6px !important;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+[data-simplebar]::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+[data-simplebar]::-webkit-scrollbar-thumb {
+  background-color: #77c5fd69 !important;
+  width: 5px !important;
 }
 
 .simplebar-offset {
@@ -1409,6 +1421,7 @@ body[data-layout-mode="bordered"] .vertical-menu {
 
 body[data-sidebar-size="sm"] [data-simplebar] {
   margin-top: 74px !important;
+  overflow: visible;
 }
 
 body[data-sidebar-size="lg"] .vertical-menu-btn svg {

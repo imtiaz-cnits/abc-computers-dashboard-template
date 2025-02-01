@@ -4,6 +4,7 @@ import generatePDF from "../../../../public/js/generate-pdf";
 import generateXLSX from "../../../../public/js/generate-xlsx";
 import copyTableToClipboard from "../../../../public/js/copyToClipboard";
 import generatePrint from "../../../../public/js/generate-print";
+import generateCSV from "../../../../public/js/generate-csv";
 
 const Brands = () => {
   const tableRef = useRef(null);
@@ -84,7 +85,10 @@ const Brands = () => {
                     />
                   </svg>
                 </button>
-                <button id="csvBtn">
+                <button
+                  id="csvBtn"
+                  onClick={() => generateCSV(tableRef.current)}
+                >
                   <svg
                     width="23"
                     height="28"
@@ -147,10 +151,7 @@ const Brands = () => {
                     />
                   </svg>
                 </button>
-                <button
-                  id="printBtn"
-                  onClick={() => generatePrint(tableRef)}
-                >
+                <button id="printBtn" onClick={() => generatePrint(tableRef)}>
                   <svg
                     width="27"
                     height="28"

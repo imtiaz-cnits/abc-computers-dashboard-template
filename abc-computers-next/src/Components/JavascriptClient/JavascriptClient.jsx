@@ -6,6 +6,7 @@ const JavascriptClient = () => {
     return (
         <>
             <Script src="/js/bootstrap.bundle.min.js" strategy="beforeInteractive" />
+            <Script src="/js/sidebar.js" strategy="beforeInteractive" />
         </>
     );
 };

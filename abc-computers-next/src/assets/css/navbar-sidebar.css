@@ -589,14 +589,15 @@ body[data-sidebar-size="sm"] #page-topbar {
 }
 
 .vertical-menu .menu .sub-menu {
-  display: none;
+  visibility: hidden;
   margin-left: 52px !important;
   padding: 5px 0 !important;
   background: var(--gray);
   margin-right: 12px !important;
   border-radius: 8px;
   z-index: 9;
-  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
   transition: all 0.3s ease;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -604,9 +605,9 @@ body[data-sidebar-size="sm"] #page-topbar {
   -o-border-radius: 8px;
 }
 
-.vertical-menu .sub-menu.active {
-  display: block;
-  opacity: 1;
+.vertical-menu .submenu-active.active .sub-menu {
+  visibility: visible;
+  max-height: 500px;
 }
 
 .vertical-menu .menu .sub-menu li:nth-last-of-type(1) {
@@ -648,6 +649,16 @@ body[data-sidebar-size="sm"] #page-topbar {
 .vertical-menu .menu .sub-menu li.active a {
   background: var(--text-color);
   color: var(--white);
+}
+
+.vertical-menu .submenu-active {
+  max-height: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.vertical-menu .submenu-active.active {
+  max-height: 1000px;
 }
 
 .vertical-menu .menu ul li.active>a svg rect,

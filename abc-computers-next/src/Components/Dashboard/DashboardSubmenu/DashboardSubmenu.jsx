@@ -21,13 +21,13 @@ const DashboardSubmenu = ({ submenuItems, icon, submenuTitle }) => {
     // TODO: make it floating on side bar collapse
 
     return (
-        <li className={`submenu-active ${submenuActive ? "active" : ''}`}>
-            <a onClick={() => setSubmenuActive(!submenuActive)} >
+        <li className={`submenu-active ${submenuActive ? "active" : ""}`}>
+            <a className='submenu-toggle'>
                 {icon}
                 <span className="text">{submenuTitle}</span>
                 <FaAngleDown className="arrow-icon" />
             </a>
-            <ul className={`sub-menu ${submenuActive ? "active" : ""}`}>
+            <ul className={`sub-menu`}>
                 {
                     submenuItems?.map((item, idx) => (
                         <DashboardSubmenuActiveLink key={idx} href={item?.href} setSubmenuActive={setSubmenuActive}>

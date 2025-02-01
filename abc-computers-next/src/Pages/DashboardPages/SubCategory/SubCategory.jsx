@@ -1,7 +1,10 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import generatePDF from "../../../../public/js/generate-pdf";
 
 const SubCategory = () => {
+  const tableRef = useRef(null);
+
   return (
     <div className="main-content">
       <div className="page-content">
@@ -143,7 +146,10 @@ const SubCategory = () => {
                     />
                   </svg>
                 </button>
-                <button id="pdfBtn">
+                <button
+                  id="pdfBtn"
+                  onClick={() => generatePDF(tableRef?.current)}
+                >
                   <svg
                     width="23"
                     height="28"
@@ -245,7 +251,11 @@ const SubCategory = () => {
             <div className="card-body">
               {/* <!-- Table --> */}
               <div className="table-wrapper">
-                <table id="printTable" className="table table-hover">
+                <table
+                  id="printTable"
+                  className="table table-hover"
+                  ref={tableRef}
+                >
                   <thead>
                     <tr>
                       <th>Serial No:</th>

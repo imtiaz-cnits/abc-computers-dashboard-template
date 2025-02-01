@@ -3,7 +3,6 @@
 import DashboardNavbar from "@/Components/Dashboard/DashboardNavbar/DashboardNavbar";
 import DashboardSidebar from "@/Components/Dashboard/DashboardSidebar/DashboardSidebar";
 import React, { useEffect } from "react";
-import { jsPDF } from "jspdf";
 
 const DashboardLayout = ({ children }) => {
   useEffect(() => {
@@ -14,19 +13,6 @@ const DashboardLayout = ({ children }) => {
     document.body.appendChild(script);
 
     script.onload = () => {
-
-      // Sidebar Close on Outside Click
-      document.addEventListener("click", function (event) {
-        const sidebar = document.querySelector(".vertical-menu");
-        const toggleButton = document.querySelector(".vertical-menu-btn");
-
-        if (
-          !sidebar.contains(event.target) &&
-          !toggleButton.contains(event.target)
-        ) {
-          document.body.classList.remove("sidebar-enable");
-        }
-      });
 
       // Initialize Sidebar Active State on Page Load
       document.addEventListener("DOMContentLoaded", function () {
@@ -82,30 +68,11 @@ const DashboardLayout = ({ children }) => {
           downloadLink.click();
         });
 
-        // Export table to PDF
-        $("#pdfBtn").click(function () {
-          const { jsPDF } = window?.jspdf;
-          const doc = new jsPDF();
-
-          if (doc.autoTable) {
-            // Add the table content to the PDF
-            doc.autoTable({
-              html: "table",
-              startY: 10,
-            });
-
-            // Save the PDF
-            doc.save("data.pdf");
-          } else {
-            console.error("autoTable is not loaded.");
-          }
-        });
-
         // Export table to XLSX
-        $("#xlsxBtn").click(function () {
-          const wb = XLSX.utils.table_to_book(document.querySelector("table"));
-          XLSX.writeFile(wb, "data.xlsx");
-        });
+        // $("#xlsxBtn").click(function () {
+        //   const wb = XLSX.utils.table_to_book(document.querySelector("table"));
+        //   XLSX.writeFile(wb, "data.xlsx");
+        // });
 
         // Print table
         $("#printBtn").click(function () {
